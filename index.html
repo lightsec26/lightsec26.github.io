@@ -305,6 +305,35 @@
             margin-top: 4rem;
         }
 
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            margin: 10px 5px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            color: var(--white);
+        }
+
+        .btn-download {
+            background-color: var(--accent-orange);
+        }
+
+        .btn-download:hover {
+            background-color: var(--primary-blue);
+        }
+
         /* Responsive */
         /* Responsive */
         @media (max-width: 768px) {
@@ -489,49 +518,70 @@
         </div>
 
         <div id="program" class="tab-content">
-            <h2>Call For Papers</h2>
-            <p>LightSec 2026 enthusiastically welcomes papers on algorithms, protocols, techniques, and their secure and
-                efficient implementations for applications utilizing advanced cryptographic algorithms.</p>
+            <div class="grid-2">
+                <div>
+                    <h2>Call For Papers</h2>
+                    <p>LightSec 2026 enthusiastically welcomes papers on algorithms, protocols, techniques, and their
+                        secure and
+                        efficient implementations for applications utilizing advanced cryptographic algorithms.</p>
 
-            <h3>Topics of Interest</h3>
-            <p>We invite submissions on a wide range of topics, including but not limited to:</p>
-            <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2; margin-top: 1rem;">
-                <li>Design, analysis and implementation of lightweight cryptographic schemes</li>
-                <li>Cryptographic hardware development for constrained domains</li>
-                <li>Side channel and fault analysis and countermeasures</li>
-                <li>Efficient and secure post-quantum cryptographic algorithms</li>
-                <li>Security and privacy solutions for 5G/6G networks</li>
-                <li>Security and privacy solutions for IoT</li>
-                <li>Fast, efficient and secure acceleration solutions</li>
-                <li>Cryptographic solutions for RISC-V ecosystem</li>
-                <li>Lightweight solutions for privacy-preserving ML on edge</li>
-                <li>Efficient cryptographic solutions for blockchain</li>
-                <li>Formal methods for analysis of lightweight protocols</li>
-                <li>AI for cryptography & Security implications of AI</li>
-            </ul>
+                    <div style="margin: 20px 0;">
+                        <a href="LightSEC_2026_CfP.pdf" class="btn btn-download" download>Download Call for Papers</a>
+                        <a href="LightSec2026poster.pdf" class="btn btn-download" download>Download Poster</a>
+                    </div>
 
-            <h3>Submission Instructions</h3>
-            <p>Authors are invited to submit original research papers. All submissions will be double-blind
-                peer-reviewed. Detailed formatting instructions and the submission link (EasyChair) will be provided
-                here shortly.</p>
-            <p>The submissions must be anonymous with no author names, affiliations or obvious references. Submissions
-                must not substantially duplicate work that any of the authors has published in a journal or a
-                conference/workshop with proceedings or has submitted/is planning to submit before the author
-                notification deadline to a journal or other conferences/workshops that have proceedings. Accepted
-                submissions may not appear in any other conference or workshop that has proceedings.</p>
-            <p>The proceedings will be published in Springer-Verlag’s LNCS series. Hence, the final version of accepted
-                papers will have to follow the <a href="https://www.springer.com/gp/computer-science/lncs"
-                    target="_blank" style="color: var(--accent-orange); font-weight: bold;">LNCS guidelines</a> using
-                Springer’s standard fonts, font sizes, and margins with a total page limit of 20 pages including
-                references and appendices.</p>
-            <p>Submissions to LightSec 2026 must follow the same format. Clearly marked supplementary materials may be
-                appended without a page limit, but reviewers are neither required to read them nor will they be printed
-                in the proceedings. Hence papers must be intelligible and self-contained within the 20 page bound.</p>
+                    <h3>Topics of Interest</h3>
+                    <p>We invite submissions on a wide range of topics, including but not limited to:</p>
+                    <ul style="columns: 1; margin-top: 1rem; padding-left: 20px;">
+                        <li>Design, analysis and implementation of lightweight cryptographic schemes</li>
+                        <li>Cryptographic hardware development for constrained domains</li>
+                        <li>Side channel and fault analysis and countermeasures</li>
+                        <li>Efficient and secure post-quantum cryptographic algorithms</li>
+                        <li>Security and privacy solutions for 5G/6G networks</li>
+                        <li>Security and privacy solutions for IoT</li>
+                        <li>Fast, efficient and secure acceleration solutions</li>
+                        <li>Cryptographic solutions for RISC-V ecosystem</li>
+                        <li>Lightweight solutions for privacy-preserving ML on edge</li>
+                        <li>Efficient cryptographic solutions for blockchain</li>
+                        <li>Formal methods for analysis of lightweight protocols</li>
+                        <li>AI for cryptography & Security implications of AI</li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <img src="poster.png" alt="LightSec 2026 Poster"
+                        style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+                </div>
+            </div>
 
-            <div style="text-align: center; margin-top: 2rem;">
-                <button class="btn"
-                    style="background-color: #ccc; cursor: not-allowed; padding: 10px 20px; border:none; border-radius:5px; color: #666;">Submit
-                    Paper (Link Coming Soon)</button>
+            <div style="margin-top: 2rem;">
+                <h3>Submission Instructions</h3>
+                <p>Authors are invited to submit original research papers. All submissions will be double-blind
+                    peer-reviewed. Detailed formatting instructions and the submission link (EasyChair) will be provided
+                    here shortly.</p>
+                <p>The submissions must be anonymous with no author names, affiliations or obvious references.
+                    Submissions
+                    must not substantially duplicate work that any of the authors has published in a journal or a
+                    conference/workshop with proceedings or has submitted/is planning to submit before the author
+                    notification deadline to a journal or other conferences/workshops that have proceedings. Accepted
+                    submissions may not appear in any other conference or workshop that has proceedings.</p>
+                <p>The proceedings will be published in Springer-Verlag’s LNCS series. Hence, the final version of
+                    accepted
+                    papers will have to follow the <a href="https://www.springer.com/gp/computer-science/lncs"
+                        target="_blank" style="color: var(--accent-orange); font-weight: bold;">LNCS guidelines</a>
+                    using
+                    Springer’s standard fonts, font sizes, and margins with a total page limit of 20 pages including
+                    references and appendices.</p>
+                <p>Submissions to LightSec 2026 must follow the same format. Clearly marked supplementary materials may
+                    be
+                    appended without a page limit, but reviewers are neither required to read them nor will they be
+                    printed
+                    in the proceedings. Hence papers must be intelligible and self-contained within the 20 page bound.
+                </p>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" class="btn" style="background-color: #ccc; cursor: not-allowed; opacity: 0.7;">Submit
+                        Paper (Link Coming Soon)</a>
+                </div>
             </div>
         </div>
 
