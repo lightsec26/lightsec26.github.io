@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightSec 2026 — Antalya</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="LightSEC 2026: 7th International Workshop on Lightweight Cryptography for Security & Privacy. October 9-10, 2026 at Akdeniz University, Antalya, Turkey.">
+    <meta name="keywords"
+        content="LightSec 2026, lightweight cryptography, privacy, security, workshop, Akdeniz University, Antalya, turkey, post-quantum cryptography">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lightsec26.github.io/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LightSec 2026 - Antalya">
+    <meta property="og:description"
+        content="LightSEC 2026: 7th International Workshop on Lightweight Cryptography for Security & Privacy. October 9-10, 2026.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lightsec26.github.io/">
+    <meta property="og:image" content="https://lightsec26.github.io/antalya.jpg">
+    <meta property="og:site_name" content="LightSec 2026">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LightSec 2026 - Antalya">
+    <meta name="twitter:description"
+        content="LightSEC 2026: 7th International Workshop on Lightweight Cryptography for Security & Privacy. October 9-10, 2026.">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Refined Mediterranean / Academic palette */
+            --navy-950: #0a1733;
+            --navy-900: #0f1e3d;
+            --navy-800: #142a52;
+            --navy-700: #1c3a6e;
+            --navy-600: #2a4d8a;
+
+            --primary-blue: #0f1e3d;
+            --primary-deep: #0a1733;
+            --accent-orange: #ea6a1f;
+            --accent-orange-soft: #f59e60;
+            --accent-amber: #f59e0b;
+            --teal: #0d9488;
+            --teal-soft: #5eead4;
+
+            --bg: #f7f5f0;
+            /* warm off-white, limestone */
+            --surface: #ffffff;
+            --surface-2: #fbfaf6;
+            --border: #e7e3d9;
+            --border-strong: #d6d1c3;
+
+            --text: #0f172a;
+            --text-muted: #5b6577;
+            --text-soft: #8a93a4;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(15, 30, 61, 0.04), 0 1px 3px rgba(15, 30, 61, 0.06);
+            --shadow-md: 0 4px 6px rgba(15, 30, 61, 0.04), 0 10px 20px rgba(15, 30, 61, 0.06);
+            --shadow-lg: 0 10px 15px rgba(15, 30, 61, 0.06), 0 20px 40px rgba(15, 30, 61, 0.08);
+            --shadow-xl: 0 25px 50px rgba(15, 30, 61, 0.12);
+
+            /* Radii */
+            --r-sm: 8px;
+            --r-md: 12px;
+            --r-lg: 16px;
+            --r-xl: 24px;
+
+            --container: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Decorative background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(234, 106, 31, 0.05), transparent 40%),
+                radial-gradient(circle at 90% 20%, rgba(13, 148, 136, 0.04), transparent 45%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        a {
+            color: var(--navy-700);
+            transition: color .2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* Sticky site header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 460px;
+            background-image:
+                linear-gradient(180deg, rgba(10, 23, 51, 0.45) 0%, rgba(10, 23, 51, 0.35) 50%, rgba(10, 23, 51, 0.65) 100%),
+                url('antalya.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at center bottom, rgba(234, 106, 31, 0.08), transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Glass panel */
+        .glass-panel {
+            background: rgba(15, 30, 61, 0.28);
+            backdrop-filter: blur(14px) saturate(140%);
+            -webkit-backdrop-filter: blur(14px) saturate(140%);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: var(--r-xl);
+            padding: 40px 56px;
+            text-align: center;
+            color: #fff;
+            box-shadow:
+                0 1px 0 rgba(255, 255, 255, 0.15) inset,
+                0 20px 60px rgba(0, 0, 0, 0.25);
+            will-change: opacity, transform;
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+
+        .glass-panel .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 14px;
+            border-radius: 999px;
+            margin-bottom: 18px;
+        }
+
+        .glass-panel .eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-orange);
+            box-shadow: 0 0 0 3px rgba(234, 106, 31, 0.3);
+        }
+
+        .glass-panel h1 {
+            margin: 0;
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-panel p.subtitle {
+            font-size: 1.15rem;
+            margin-top: 0.6rem;
+            font-weight: 300;
+            opacity: 0.95;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-panel p.venue-date {
+            margin-top: 1.1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            opacity: 0.95;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .glass-panel .venue-divider {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent-orange);
+            margin: 0 12px;
+            vertical-align: middle;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(15, 30, 61, 0.04);
+        }
+
+        .nav-container {
+            max-width: var(--container);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 1.1rem 1.4rem;
+            font-size: 0.94rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.25s ease;
+            font-weight: 500;
+            font-family: inherit;
+            border-bottom: 2px solid transparent;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .tab-button:hover {
+            color: var(--primary-blue);
+        }
+
+        .tab-button.active {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 1.4rem;
+            right: 1.4rem;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-amber));
+            border-radius: 2px 2px 0 0;
+        }
+
+        /* Main content */
+        main {
+            max-width: var(--container);
+            margin: 2.5rem auto 4rem;
+            padding: 0 1.25rem;
+            min-height: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tab-content {
+            display: none;
+            background-color: var(--surface);
+            padding: 3rem;
+            border-radius: var(--r-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            animation: fadeIn 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            letter-spacing: -0.015em;
+        }
+
+        .tab-content>h1 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--primary-blue);
+            margin-top: 0;
+            line-height: 1.2;
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            font-size: 1.85rem;
+            margin-top: 0;
+            padding-left: 1rem;
+            position: relative;
+            line-height: 1.2;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.25em;
+            bottom: 0.25em;
+            width: 4px;
+            background: linear-gradient(180deg, var(--accent-orange), var(--accent-amber));
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--primary-blue);
+            font-size: 1.25rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+        }
+
+        h4 {
+            color: var(--primary-blue);
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0.6rem 0 1rem;
+            color: var(--text);
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* Components */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-md);
+            padding: 1.75rem;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-strong);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+            font-size: 1.1rem;
+        }
+
+        /* Subtle accent card */
+        .card.accent {
+            background: linear-gradient(135deg, var(--surface-2), var(--surface));
+            border-left: 3px solid var(--accent-orange);
+        }
+
+        .img-responsive {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--r-sm);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 1rem 0;
+            background: var(--surface);
+            border-radius: var(--r-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+            color: #fff;
+            font-weight: 500;
+            width: 50%;
+            letter-spacing: 0.01em;
+        }
+
+        td {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        tr:last-child th,
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Map */
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--r-md);
+            margin-top: 1rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            border: 0;
+        }
+
+        /* Sponsors */
+        .sponsor-grid {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-start;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .sponsor-placeholder {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-sm);
+            display: flex;
+            align-items: center;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .sponsor-placeholder:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-orange);
+            color: var(--primary-blue);
+        }
+
+        .direction-link,
+        .profile-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 6px;
+            color: var(--accent-orange);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: gap 0.2s ease;
+        }
+
+        .direction-link:hover,
+        .profile-link:hover {
+            text-decoration: none;
+            gap: 8px;
+            color: var(--accent-orange);
+        }
+
+        .committee-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .committee-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .committee-list li:last-child {
+            border-bottom: none;
+        }
+
+        .committee-list a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .committee-list a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, var(--navy-950), var(--navy-800));
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 4rem;
+            font-size: 0.92rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-amber));
+            border-radius: 2px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--primary-blue);
+            color: #fff;
+            text-decoration: none;
+            border-radius: var(--r-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: none;
+            margin: 8px 4px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            background: var(--navy-800);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            color: #fff;
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--accent-orange), #d85a14);
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, #d85a14, #b94a0c);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 1px solid var(--border-strong);
+        }
+
+        .btn-ghost:hover {
+            background: var(--surface-2);
+            color: var(--primary-blue);
+            border-color: var(--accent-orange);
+        }
+
+        /* Form */
+        .contact-form {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.45rem;
+            color: var(--text);
+            font-size: 0.92rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border-strong);
+            border-radius: var(--r-sm);
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: var(--surface);
+            color: var(--text);
+            transition: all 0.2s;
+            box-sizing: border-box;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 3px rgba(234, 106, 31, 0.12);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        /* Sponsor tier */
+        .sponsor-tier {
+            border: 1.5px dashed var(--border-strong);
+            border-radius: var(--r-md);
+            padding: 2rem;
+            text-align: center;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            background: var(--surface);
+        }
+
+        .sponsor-tier:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .sponsor-tier.platinum {
+            border-color: #b8b8b8;
+            background: linear-gradient(135deg, #fafafa 0%, #eeeeee 100%);
+        }
+
+        .sponsor-tier.gold {
+            border-color: #d4a017;
+            background: linear-gradient(135deg, #fffef5 0%, #fdf3d3 100%);
+        }
+
+        .sponsor-tier h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        /* Contact category cards */
+        .contact-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-cat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-md);
+            padding: 1.25rem;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+
+        .contact-cat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-orange);
+        }
+
+        .contact-cat-card h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1rem;
+        }
+
+        .contact-cat-card p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* Registration placeholder */
+        .reg-placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .reg-placeholder-card {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: var(--r-md);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+
+        .reg-placeholder-card:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .reg-placeholder-card h4 {
+            margin: 0 0 0.6rem 0;
+        }
+
+        .reg-placeholder-card p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 0.92rem;
+        }
+
+        .tpc-columns {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            column-gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .tpc-columns {
+                columns: 1;
+                -webkit-columns: 1;
+                -moz-columns: 1;
+            }
+        }
+
+        /* Tentative box */
+        .tentative-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #fef3c7 100%);
+            border: 1px solid #fcd34d;
+            border-left: 4px solid var(--accent-amber);
+            border-radius: var(--r-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tentative-box h4 {
+            color: #b45309;
+            margin-top: 0;
+        }
+
+        .tentative-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlighted feature box (rafting event) */
+        .feature-box {
+            background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+            padding: 1.75rem 2rem;
+            border-radius: var(--r-lg);
+            border: 1px solid #67e8f9;
+            border-left: 4px solid var(--teal);
+            margin-bottom: 2rem;
+        }
+
+        .feature-box h3 {
+            margin-top: 0;
+            color: #0e7490;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* Important dates table - compact variant */
+        .dates-table th {
+            font-size: 0.88rem;
+        }
+
+        .dates-table td {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Lead paragraph */
+        .lead {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--text);
+        }
+
+        /* Section divider */
+        .section-divider {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+            margin: 2.5rem 0;
+            border: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .banner {
+                height: 360px;
+                padding: 16px;
+            }
+
+            .glass-panel {
+                padding: 24px 20px;
+                max-width: 92%;
+            }
+
+            .glass-panel h1 {
+                font-size: 1.85rem;
+            }
+
+            .glass-panel p.subtitle {
+                font-size: 0.95rem;
+            }
+
+            .glass-panel p.venue-date {
+                font-size: 0.85rem;
+            }
+
+            .tab-content {
+                padding: 1.75rem 1.25rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .nav-container {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                justify-content: flex-start;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 0.5rem 4px;
+            }
+
+            .nav-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .tab-button {
+                flex: 0 0 auto;
+                padding: 0.95rem 1rem;
+                font-size: 0.88rem;
+            }
+
+            main {
+                margin: 1.5rem auto 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TSGEDRLXG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5TSGEDRLXG');
+</script>
+
+<body>
+
+    <div class="banner">
+        <div class="glass-panel">
+            <span class="eyebrow">7th International Workshop</span>
+            <h1>LightSec 2026</h1>
+            <p class="subtitle">Lightweight Cryptography for Security &amp; Privacy</p>
+            <p class="venue-date">October 9 – 10, 2026<span class="venue-divider"></span>Akdeniz University, Antalya</p>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
+            <button class="tab-button" onclick="openTab(event, 'program')">Program &amp; Submission</button>
+            <button class="tab-button" onclick="openTab(event, 'organization')">Organization</button>
+            <button class="tab-button" onclick="openTab(event, 'venue')">Venue &amp; Travel</button>
+            <button class="tab-button" onclick="openTab(event, 'accommodation')">Accommodation</button>
+            <button class="tab-button" onclick="openTab(event, 'social')">Social Activities</button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="home" class="tab-content active">
+            <h1>7th International Workshop on Lightweight Cryptography for Security &amp; Privacy</h1>
+            <p class="lead">LightSEC 2026 promotes and initiates novel research on security, privacy, and trust issues
+                related to applications that fall under the umbrella of lightweight security. The term “lightweight”
+                refers not only to conventional constraints on metrics such as computational and communication
+                complexity, execution time (both throughput and latency), power, energy, area, memory capacity, and
+                bandwidth, but also to constraints concerning the sizes of ciphertexts, public and private keys, and
+                the compactness of proofs in zero-knowledge protocols. As new applications based on novel and advanced
+                cryptographic schemes become increasingly ubiquitous and provide immense value to society across sectors
+                such as AI, blockchain, IoT, and 5G/6G, they also impact a larger portion of the public, raising
+                numerous security and privacy concerns that must be thoroughly addressed before widespread deployment.
+                LightSEC 2026 enthusiastically welcomes papers on algorithms, protocols, techniques, and their secure
+                and efficient implementations for applications utilizing advanced cryptographic algorithms such as
+                homomorphic encryption, zero-knowledge proofs, secure multi-party computation, cryptographic consensus
+                protocols in blockchain applications, threshold cryptography, and post-quantum cryptography.</p>
+
+            <hr class="section-divider">
+
+            <div class="grid-2">
+                <div>
+                    <h3>Objective &amp; Scope</h3>
+                    <p>The main objective of LightSec 2026 is to bring together researchers and practitioners to
+                        discuss:</p>
+                    <ul>
+                        <li>Lightweight Cryptography for IoT</li>
+                        <li>Resource-constrained Security Protocols</li>
+                        <li>Privacy in Edge Computing</li>
+                        <li>Efficient implementations of Post-Quantum Cryptography</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Important Dates</h3>
+                    <div style="overflow-x: auto;">
+                        <table class="dates-table">
+                            <tr>
+                                <th>Paper submission deadline</th>
+                                <td>June 19, 2026</td>
+                            </tr>
+                            <tr>
+                                <th>Author notification</th>
+                                <td>August 21, 2026</td>
+                            </tr>
+                            <tr>
+                                <th>Camera ready (pre-conference)</th>
+                                <td>September 21, 2026</td>
+                            </tr>
+                            <tr>
+                                <th>Camera ready (post-conference)</th>
+                                <td>October 26, 2026</td>
+                            </tr>
+                            <tr>
+                                <th>Workshop date</th>
+                                <td>October 9-10, 2026</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <div class="grid-2">
+                <div>
+                    <h3>Sponsoring Institutions</h3>
+                    <div class="sponsor-grid">
+                        <a href="https://www.akdeniz.edu.tr/" target="_blank" class="sponsor-placeholder"
+                            style="padding: 12px 16px; min-height: 60px;">
+                            <img src="logos/akdeniz.png" alt="Akdeniz University Logo"
+                                style="height: 38px; margin-right: 12px; object-fit: contain;">
+                            <span>Akdeniz University</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Powered By</h3>
+                    <div class="sponsor-grid">
+                        <a href="https://www.akdeniz.edu.tr/" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/akdeniz.png" alt="Akdeniz Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>Akdeniz University</span>
+                        </a>
+                        <a href="https://antalya.edu.tr/" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/antalyabilim.png" alt="Antalya Bilim Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>Antalya Bilim University</span>
+                        </a>
+                        <a href="https://sabanciuniv.edu/" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/sabanci.png" alt="Sabanci Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>Sabanci University</span>
+                        </a>
+                        <a href="https://iyte.edu.tr/" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/iyte.png" alt="IYTE Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>Izmir Institute of Technology</span>
+                        </a>
+                        <a href="https://ut.ee/en" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/tartu.png" alt="Tartu Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>University of Tartu</span>
+                        </a>
+                        <a href="https://www.aselsan.com/tr" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/aselsan.png" alt="ASELSAN Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>ASELSAN</span>
+                        </a>
+                        <a href="https://bilgem.tubitak.gov.tr/uekae/" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/bilgem.png" alt="BILGEM Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>TÜBİTAK BİLGEM UEKAE</span>
+                        </a>
+                        <a href="https://famecrypt.com.tr/" target="_blank" class="sponsor-placeholder"
+                            style="padding: 8px 14px; min-height: 50px;">
+                            <img src="logos/fame.png" alt="FAME Logo"
+                                style="height: 30px; margin-right: 10px; object-fit: contain;">
+                            <span>FAME CRYPT</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <div style="text-align: center;">
+                <h3 style="border: none; padding: 0; display: inline-block;">Contact Us</h3>
+                <p>For any inquiries regarding LightSec 2026, please reach out:</p>
+                <p><a href="mailto:info@lightsec2026.com"
+                        style="color: var(--accent-orange); font-weight: 600; font-size: 1.15rem; text-decoration: none;">info@lightsec2026.com</a>
+                </p>
+                <p><button class="btn"
+                        onclick="openTab({currentTarget:document.querySelector('.tab-button:last-child')}, 'contact')">Go
+                        to Contact Page →</button></p>
+            </div>
+        </div>
+
+        <div id="program" class="tab-content">
+            <div class="grid-2">
+                <div>
+                    <h2>Call For Papers</h2>
+                    <p>LightSec 2026 enthusiastically welcomes papers on algorithms, protocols, techniques, and their
+                        secure and efficient implementations for applications utilizing advanced cryptographic
+                        algorithms.</p>
+
+                    <div style="margin: 1.5rem 0;">
+                        <a href="LightSEC_2026_CfP.pdf" class="btn btn-download" download>↓ Download Call for Papers</a>
+                        <a href="LightSec2026poster.pdf" class="btn btn-download" download>↓ Download Poster</a>
+                        <p style="margin-top: 0.6rem; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">
+                            Updated versions of the Call for Papers and poster/flyer will be uploaded once finalized.
+                        </p>
+                    </div>
+
+                    <h3>Topics of Interest</h3>
+                    <p>We invite submissions on a wide range of topics, including but not limited to:</p>
+                    <ul>
+                        <li>Design, analysis and implementation of lightweight cryptographic schemes</li>
+                        <li>Cryptographic hardware development for constrained domains</li>
+                        <li>Side channel and fault analysis and countermeasures</li>
+                        <li>Efficient and secure post-quantum cryptographic algorithms</li>
+                        <li>Security and privacy solutions for 5G/6G networks</li>
+                        <li>Security and privacy solutions for IoT</li>
+                        <li>Fast, efficient and secure acceleration solutions</li>
+                        <li>Cryptographic solutions for RISC-V ecosystem</li>
+                        <li>Lightweight solutions for privacy-preserving ML on edge</li>
+                        <li>Efficient cryptographic solutions for blockchain</li>
+                        <li>Formal methods for analysis of lightweight protocols</li>
+                        <li>AI for cryptography &amp; Security implications of AI</li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <img src="poster.png" alt="LightSec 2026 Poster"
+                        style="width: 100%; max-width: 450px; border-radius: var(--r-md); box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <div>
+                <h3>Submission Instructions</h3>
+                <p>Authors are invited to submit original research papers. All submissions will be double-blind
+                    peer-reviewed. Detailed formatting instructions and the submission link (EasyChair) will be provided
+                    here shortly.</p>
+                <p>The submissions must be anonymous with no author names, affiliations or obvious references.
+                    Submissions must not substantially duplicate work that any of the authors has published in a journal
+                    or a conference/workshop with proceedings or has submitted/is planning to submit before the author
+                    notification deadline to a journal or other conferences/workshops that have proceedings. Accepted
+                    submissions may not appear in any other conference or workshop that has proceedings.</p>
+                <p>The proceedings will be published in Springer-Verlag's LNCS series. Hence, the final version of
+                    accepted papers will have to follow the
+                    <a href="https://www.springer.com/gp/computer-science/lncs" target="_blank"
+                        style="color: var(--accent-orange); font-weight: 600;">LNCS guidelines</a>
+                    using Springer's standard fonts, font sizes, and margins with a total page limit of 20 pages
+                    including references and appendices.
+                </p>
+                <p>Submissions to LightSec 2026 must follow the same format. Clearly marked supplementary materials may
+                    be appended without a page limit, but reviewers are neither required to read them nor will they be
+                    printed in the proceedings. Hence papers must be intelligible and self-contained within the 20 page
+                    bound.</p>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" class="btn"
+                        style="background: #cdcdcd; cursor: not-allowed; opacity: 0.7; box-shadow: none;">Submit Paper
+                        (Link Coming Soon)</a>
+                </div>
+            </div>
+
+            <div class="tentative-box">
+                <h4>⏳ Tentative Panel / Tutorial Session</h4>
+                <p><em>A panel or tutorial session with representatives from relevant institutions may be included in
+                        the program. The session may focus on cryptography-related activities in Türkiye and the current
+                        state of the field. Details will be announced after confirmation.</em></p>
+                <p style="font-size: 0.85rem; color: #92400e; margin-bottom: 0;">This section is tentative and subject
+                    to change.</p>
+            </div>
+        </div>
+
+        <div id="organization" class="tab-content">
+            <h2>Organization</h2>
+
+            <div class="grid-2" style="margin-top: 1.5rem;">
+                <div>
+                    <div class="card accent" style="margin-bottom: 1.25rem;">
+                        <h3>General Chair</h3>
+                        <p style="margin-bottom: 0;"><strong><a href="https://avesis.akdeniz.edu.tr/ahmetsinak"
+                                    target="_blank" style="color: inherit; text-decoration: none;">Ahmet
+                                    Sınak</a></strong><br>
+                            Akdeniz University, Türkiye<br>
+                            <a href="mailto:ahmetsinak@akdeniz.edu.tr" class="profile-link"
+                                style="color: var(--primary-blue); font-weight: 500;">ahmetsinak@akdeniz.edu.tr</a>
+                        </p>
+                    </div>
+
+                    <div class="card accent">
+                        <h3>Program Co-Chairs</h3>
+                        <p><strong><a href="https://ece.ncsu.edu/people/aaysu/" target="_blank"
+                                    style="color: inherit; text-decoration: none;">Aydın Aysu</a></strong><br>
+                            Electrical and Computer Engineering, North Carolina State University, USA<br>
+                            <a href="mailto:aaysu@ncsu.edu" class="profile-link"
+                                style="color: var(--primary-blue); font-weight: 500;">aaysu@ncsu.edu</a>
+                        </p>
+
+                        <hr style="border: 0; border-top: 1px solid var(--border); margin: 1rem 0;">
+
+                        <p style="margin-bottom: 0;"><strong><a
+                                    href="https://www.barkhauseninstitut.org/en/people/elif-bilge-kavun" target="_blank"
+                                    style="color: inherit; text-decoration: none;">Elif Bilge Kavun</a></strong><br>
+                            Faculty of Computer Science, Dresden University of Technology, Dresden, Germany<br>
+                            <a href="mailto:elif.kavun@barkhauseninstitut.org" class="profile-link"
+                                style="color: var(--primary-blue); font-weight: 500;">elif.kavun@barkhauseninstitut.org</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Organizing Committee</h3>
+                    <ul class="committee-list">
+                        <li><strong><a href="https://avesis.akdeniz.edu.tr/muratak" target="_blank">Murat
+                                    Ak</a></strong>, Akdeniz University, Antalya</li>
+                        <li><strong><a href="https://ut.ee/en/employee/sedat-akleylek" target="_blank">Sedat
+                                    Akleylek</a></strong>, University of Tartu, Estonia</li>
+                        <li><strong><a href="https://avesis.akdeniz.edu.tr/alkan" target="_blank">Mustafa
+                                    Alkan</a></strong>, Akdeniz University, Antalya</li>
+                        <li><strong><a href="https://avesis.metu.edu.tr/melisa" target="_blank">Melis
+                                    Aslan</a></strong>,
+                            FAME CRYPT</li>
+                        <li><strong><a href="https://antalya.edu.tr/tr/akademik-kadro/muhendislik-fakultesi/asli-bay"
+                                    target="_blank">Aslı Bay</a></strong>, Antalya Bilim University, Antalya</li>
+                        <li><strong><a href="https://cse.iyte.edu.tr/doc-dr-orhun-kara/" target="_blank">Orhun
+                                    Kara</a></strong>, İzmir Institute of Technology, İzmir</li>
+                        <li><strong><a href="https://scholar.google.com/citations?user=_5P5suEAAAAJ"
+                                    target="_blank">Neşe Koçak</a></strong>, ASELSAN</li>
+                        <li><strong><a href="https://sites.google.com/view/kamilotal/home" target="_blank">Kamil
+                                    Otal</a></strong>, TÜBİTAK-BİLGEM</li>
+                        <li><strong><a href="https://avesis.akdeniz.edu.tr/mozdemir" target="_blank">Mustafa
+                                    Özdemir</a></strong>, Akdeniz University, Antalya</li>
+                        <li><strong><a href="https://people.sabanciuniv.edu/erkays/" target="_blank">Erkay
+                                    Savaş</a></strong>, Sabanci University, İstanbul</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3>Program Committee</h3>
+                <ul class="committee-list tpc-columns">
+                    <li><strong>Murat AK</strong>, Akdeniz University</li>
+                    <li><strong>Sedat AKLEYLEK</strong>, University of Tartu</li>
+                    <li><strong>Erdem ALKIM</strong>, Dokuz Eylül University</li>
+                    <li><strong>Aydın AYSU</strong>, North Carolina State University</li>
+                    <li><strong>Reza AZARDERAKHSH</strong>, Florida Atlantic University</li>
+                    <li><strong>Lejla BATINA</strong>, Radboud University Nijmegen</li>
+                    <li><strong>Aslı BAY</strong>, Antalya Bilim University</li>
+                    <li><strong>Emad HEYDARI BENI</strong>, KU Leuven</li>
+                    <li><strong>Begül BILGIN</strong>, Rambus</li>
+                    <li><strong>Shivam BHASIN</strong>, Nanyang Technological University</li>
+                    <li><strong>Rosario CAMMAROTA</strong>, UC Irvine</li>
+                    <li><strong>Yarkin DOROZ</strong>, Nvidia</li>
+                    <li><strong>Shibam GHOSH</strong>, INRIA</li>
+                    <li><strong>Tim GÜNEYU</strong>, Ruhr University Bochum &amp; DFKI</li>
+                    <li><strong>Orhun KARA</strong>, Izmir Institute of Technology</li>
+                    <li><strong>Koray KARABINA</strong>, National Research Council Canada</li>
+                    <li><strong>Elif Bilge KAVUN</strong>, Barkhausen Institut &amp; TU Dresden</li>
+                    <li><strong>Mehran MOZAFFARI-KERMANI</strong>, University of South Florida</li>
+                    <li><strong>Ayesha KHALID</strong>, Queen's University Belfast</li>
+                    <li><strong>Amir MORADI</strong>, TU Darmstadt</li>
+                    <li><strong>Köksal MUŞ</strong>, Worcester Polytechnic Institute</li>
+                    <li><strong>Svetla NIKOVA</strong>, KU Leuven</li>
+                    <li><strong>Kamil OTAL</strong>, TUBITAK BILGEM</li>
+                    <li><strong>Melek ÖNEN</strong>, EURECOM</li>
+                    <li><strong>Shahram RASOOLZADEH</strong>, Ruhr University Bochum</li>
+                    <li><strong>Francisco RODRIGUEZ-HENRIQUEZ</strong>, CINVESTAV-IPN &amp; CRC-TII</li>
+                    <li><strong>Sujoy SINHA ROY</strong>, Graz University of Technology</li>
+                    <li><strong>Erkay SAVAŞ</strong>, Sabancı University</li>
+                    <li><strong>Ahmet SINAK</strong>, Akdeniz University</li>
+                    <li><strong>Cihangir TEZCAN</strong>, Middle East Technical University</li>
+                    <li><strong>Oğuz YAYLA</strong>, Middle East Technical University</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">
+                    The TPC list will be updated as confirmations are finalized.
+                </p>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <h3>Poster Session Co-Chairs</h3>
+                <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1rem;">
+                    Poster Session Co-Chairs are responsible for poster submissions, poster evaluation,
+                    acceptance/rejection decisions, and the academic review of the poster session.<br>
+                    <em>Program Co-Chairs are responsible for paper submissions.</em>
+                </p>
+                <ul class="committee-list">
+                    <li><strong><a href="https://antalya.edu.tr/tr/akademik-kadro/muhendislik-fakultesi/asli-bay"
+                                target="_blank" rel="noopener noreferrer">Aslı Bay</a></strong>, Antalya Bilim
+                        University
+                    </li>
+                    <li><strong><a href="https://avesis.akdeniz.edu.tr/muratak" target="_blank"
+                                rel="noopener noreferrer">Murat Ak</a></strong>, Akdeniz University</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="venue" class="tab-content">
+            <h2>Venue &amp; Travel</h2>
+
+            <p class="lead">The conference will be held at <strong>Akdeniz University</strong>, located in the
+                Konyaaltı district of Antalya.</p>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1353.8975366123836!2d30.66120669131983!3d36.891864962961634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c391cda532111d%3A0xf6604662f3787130!2sAkdeniz%20%C3%9Cniversitesi%20Sosyal%20Tesisler!5e1!3m2!1sen!2sus!4v1770926942850!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <h3>How to Get There</h3>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h4>From Antalya Airport (AYT)</h4>
+                    <p><strong>By Taxi:</strong> Taxis are available 24/7 at the arrival terminals. The ride to the
+                        university takes about 25-30 minutes.</p>
+                    <p><strong>By Tram (Antray):</strong> Take the tram from the Airport station directly to the city
+                        center and transfer to the bus lines, or take the tram towards Fatih and get off at the nearest
+                        stop to the campus.</p>
+                    <p style="margin-bottom: 0;"><strong>By Bus:</strong> Municipal bus number 600 or 800 connects the
+                        airport to the city center/bus terminal.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Arriving by Car</h4>
+                    <p>Akdeniz University is located near the D400 highway.</p>
+
+                    <p><strong>From West (Kemer/Muğla):</strong><br>
+                        Follow D400 towards Antalya Center. The university will be on your right as you enter the city.
+                        <br>
+                        <a href="https://maps.app.goo.gl/pkC7kTVwN9GQdnvW9" class="direction-link" target="_blank">Get
+                            Directions →</a>
+                    </p>
+
+                    <p><strong>From East (Airport (AYT) / Alanya / Side):</strong><br>
+                        Follow D400 through the city, following signs for Akdeniz Üniversitesi.<br>
+                        <a href="https://maps.app.goo.gl/H7ej78UbUcxWUz73A" class="direction-link" target="_blank">Get
+                            Directions →</a>
+                    </p>
+
+                    <p><strong>From North (Istanbul / Ankara / Izmir):</strong><br>
+                        Follow D650 and Antalya Bulvarı towards Antalya City Center, then Dumlupınar Bulvarı towards
+                        Akdeniz University.<br>
+                        <a href="https://maps.app.goo.gl/EYqxU2pFeAN1Wz877" class="direction-link" target="_blank">Get
+                            Directions →</a>
+                    </p>
+
+                    <p style="margin-top: 1rem; font-style: italic; color: var(--text-muted); margin-bottom: 0;">
+                        Parking is available on campus (Guest verification may be required at the gate).</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="accommodation" class="tab-content">
+            <h2>Accommodation</h2>
+            <p class="lead">We recommend the following accommodation option located directly on the university campus
+                for your convenience.</p>
+
+            <div class="card accent">
+                <h3>Akdeniz University Social Facilities (Sosyal Tesisleri)</h3>
+                <p><strong>Location:</strong> Within the Akdeniz University Campus (walking distance to the venue).
+                </p>
+                <p>The Social Facilities offer comfortable rooms in a peaceful environment right next to the conference
+                    venue. It is the most convenient option for attendees.</p>
+
+                <p><strong>Booking:</strong><br>
+                    Please contact the facility directly to make a reservation, mentioning "LightSec 2026".</p>
+
+                <p>
+                    <strong>Phone:</strong> +90 242 227 44 00 (Placeholder)<br>
+                    <strong>Email:</strong> sosyaltesisler@akdeniz.edu.tr (Placeholder)
+                </p>
+
+                <a href="#" class="direction-link" style="color: var(--accent-orange);">Visit Website (Coming Soon)
+                    →</a>
+            </div>
+        </div>
+
+        <div id="social" class="tab-content">
+            <h2>Social Program</h2>
+            <p class="lead">Antalya offers a unique blend of history, nature, and sea. We have organized a main event,
+                but also provide suggestions for those wishing to explore on their own.</p>
+
+            <div class="feature-box">
+                <h3>Main Event: Rafting in Köprülü Canyon</h3>
+                <div class="grid-2" style="align-items: center;">
+                    <div>
+                        <p><strong>Date:</strong> October 11, 2026</p>
+                        <p>Join us for an adrenaline-filled day at Köprülü Canyon National Park. The rafting course is
+                            14 km long and suitable for beginners.</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>Shuttle departs Akdeniz University: 09:00</li>
+                            <li><em>Fee: To be announced.</em></li>
+                        </ul>
+                    </div>
+                    <img src="koprulu.jpg" alt="Rafting" class="img-responsive"
+                        style="height: 220px; margin-bottom: 0;">
+                </div>
+            </div>
+
+            <h3>Alternative Recreation Suggestions</h3>
+            <p>For participants who prefer to explore independently on October 11, here are our top recommendations:</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <img src="marina.png" alt="Kaleiçi" class="img-responsive">
+                    <h4>History &amp; City Life</h4>
+                    <p style="margin-bottom: 0;"><strong>Kaleiçi (Old Town):</strong> Explore the narrow streets,
+                        Hadrian's Gate, and the historic marina with boutique cafes.</p>
+                </div>
+
+                <div class="card">
+                    <img src="phaselis.png" alt="Beach" class="img-responsive">
+                    <h4>Sea &amp; Sun</h4>
+                    <p style="margin-bottom: 0;"><strong>Konyaaltı Beach:</strong> Just minutes from the university.
+                        <br>
+                        <strong>Phaselis:</strong> Ancient ruins nestled right on the shore of pristine bays.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="aspendos.png" alt="Ancient Ruins" class="img-responsive">
+                    <h4>Ancient Cities</h4>
+                    <p style="margin-bottom: 0;"><strong>Perge &amp; Aspendos:</strong> Visit the best-preserved Roman
+                        theater in the world and the ancient capital of Pamphylia.</p>
+                </div>
+
+                <div class="card">
+                    <img src="olympos.png" alt="Nature" class="img-responsive">
+                    <h4>Nature</h4>
+                    <p style="margin-bottom: 0;"><strong>Olympos / Chimaera:</strong> Famous for its treehouses,
+                        ancient ruins, and the eternal flames (Yanartaş).</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ════════════ POSTER SESSION ════════════ -->
+        <div id="poster" class="tab-content">
+            <h2>Student Poster Session</h2>
+            <p class="lead">LightSec 2026 plans to include a <strong>Student Poster Session</strong> as part of the
+                workshop program. This session provides an opportunity for graduate and undergraduate students to
+                present their ongoing or recently completed research in lightweight cryptography and related areas.</p>
+            <p>Detailed poster submission instructions, guidelines, and the submission link will be announced at a
+                later date. A separate poster session flyer/brochure will be uploaded when available.</p>
+
+            <h3>Tentative Submission Period</h3>
+            <p>July – August 2026 (exact dates to be announced).</p>
+
+            <h3>Important Dates</h3>
+            <div style="overflow-x: auto;">
+                <table class="dates-table">
+                    <tr>
+                        <th>Poster submission deadline</th>
+                        <td>To be announced</td>
+                    </tr>
+                    <tr>
+                        <th>Author notification</th>
+                        <td>To be announced</td>
+                    </tr>
+                    <tr>
+                        <th>Camera-ready / final poster</th>
+                        <td>To be announced</td>
+                    </tr>
+                    <tr>
+                        <th>Poster session date</th>
+                        <td>October 9–10, 2026 (within workshop)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Submission Guidelines</h3>
+            <p>Detailed submission guidelines will be provided when the poster submission system opens. In general,
+                submissions are expected to:</p>
+            <ul>
+                <li>Be relevant to the topics of LightSec 2026 (see Call for Papers).</li>
+                <li>Be authored primarily by students (graduate or undergraduate).</li>
+                <li>Present original, ongoing, or recently completed research.</li>
+                <li>Follow the formatting requirements to be specified in the guidelines.</li>
+            </ul>
+            <p style="font-style: italic; color: var(--text-muted);">Submission link: To be announced.</p>
+
+            <h3>Review &amp; Evaluation Process</h3>
+            <p>Poster submissions will be reviewed academically by the <strong>Poster Session Co-Chairs</strong>, who
+                are responsible for evaluation and acceptance/rejection decisions. The review process will assess
+                originality, relevance, and clarity of the presented research.</p>
+
+            <h3>Notification of Acceptance</h3>
+            <p>Authors will be notified of acceptance or rejection by the date to be announced. Accepted posters must
+                be prepared according to the final guidelines and presented in person during the poster session.</p>
+
+            <h3>Poster Session Co-Chairs</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Aslı Bay</h4>
+                    <p style="margin-bottom: 0;">Antalya Bilim University, Antalya, Türkiye</p>
+                </div>
+                <div class="card">
+                    <h4>Murat Ak</h4>
+                    <p style="margin-bottom: 0;">Akdeniz University, Antalya, Türkiye</p>
+                </div>
+            </div>
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--text-muted);">
+                A separate poster session flyer/brochure will be uploaded when available.
+            </p>
+        </div>
+
+        <!-- ════════════ REGISTRATION ════════════ -->
+        <div id="registration" class="tab-content">
+            <h2>Registration</h2>
+            <p class="lead">Registration details, payment instructions, fees, and the registration link will be
+                announced soon. Please check this page regularly for updates.</p>
+
+            <div class="reg-placeholder-grid">
+                <div class="reg-placeholder-card">
+                    <h4>📅 Registration Information</h4>
+                    <p>To be announced.</p>
+                </div>
+                <div class="reg-placeholder-card">
+                    <h4>💳 Payment Instructions</h4>
+                    <p>To be announced.</p>
+                </div>
+                <div class="reg-placeholder-card">
+                    <h4>🔗 Registration Link</h4>
+                    <p>To be announced.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Contact for Registration Inquiries</h3>
+                <p style="margin-bottom: 0;">For any questions related to registration, please contact us at:<br>
+                    <a href="mailto:info@lightsec2026.com"
+                        style="color: var(--accent-orange); font-weight: 600;">info@lightsec2026.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- ════════════ SPONSORSHIP ════════════ -->
+        <div id="sponsorship" class="tab-content">
+            <h2>Sponsorship</h2>
+            <p class="lead">LightSec 2026 offers sponsorship opportunities for organizations interested in supporting
+                research in lightweight cryptography, security, and privacy. Sponsorship details and packages will be
+                announced soon. Sponsor logos and details will be added as agreements are finalized.</p>
+            <p style="font-style: italic; color: var(--text-muted);">A sponsorship booklet will be prepared
+                separately.</p>
+
+            <h3>Sponsorship Tiers</h3>
+            <div class="grid-2" style="margin-top: 1rem;">
+                <div class="sponsor-tier platinum">
+                    <h4>⭐ Platinum Sponsor</h4>
+                    <p style="color: var(--text-muted); margin: 0.5rem 0 0;">Sponsor logo and details to be added.</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">To be announced.</p>
+                </div>
+                <div class="sponsor-tier gold">
+                    <h4>🏅 Gold Sponsor</h4>
+                    <p style="color: var(--text-muted); margin: 0.5rem 0 0;">Sponsor logo and details to be added.</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">To be announced.</p>
+                </div>
+            </div>
+
+            <h3>Potential Supporting Institutions</h3>
+            <p>The following institutions have expressed potential interest in supporting LightSec 2026. Their
+                participation as confirmed sponsors will be announced once agreements are finalized:</p>
+            <ul>
+                <li>ASELSAN</li>
+                <li>TÜBİTAK BİLGEM</li>
+                <li>FAME CRYPT</li>
+                <li>Companies from Antalya Technopark</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: var(--text-muted); font-style: italic;">
+                Note: The above list reflects potential interest only and does not imply confirmed sponsorship.
+            </p>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Sponsorship Inquiries</h3>
+                <p style="margin-bottom: 0;">For sponsorship opportunities and inquiries, please contact:<br>
+                    <a href="mailto:info@lightsec2026.com"
+                        style="color: var(--accent-orange); font-weight: 600;">info@lightsec2026.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- ════════════ CONTACT ════════════ -->
+        <div id="contact" class="tab-content">
+            <h2>Contact</h2>
+            <p class="lead">For inquiries about LightSec 2026, please use the form below or contact us directly at
+                <a href="mailto:info@lightsec2026.com"
+                    style="color: var(--accent-orange); font-weight: 600;">info@lightsec2026.com</a>.
+            </p>
+
+            <div class="contact-categories">
+                <div class="contact-cat-card">
+                    <h4>🎓 Authors</h4>
+                    <p>Paper submissions, review process, and author notifications.</p>
+                </div>
+                <div class="contact-cat-card">
+                    <h4>🌟 Participants</h4>
+                    <p>Registration, accommodation, and travel inquiries.</p>
+                </div>
+                <div class="contact-cat-card">
+                    <h4>📈 Sponsors</h4>
+                    <p>Sponsorship opportunities and partnership agreements.</p>
+                </div>
+                <div class="contact-cat-card">
+                    <h4>📄 Poster Applicants</h4>
+                    <p>Student poster session information and submissions.</p>
+                </div>
+            </div>
+
+            <div class="grid-2" style="margin-top: 2rem; align-items: start;">
+                <div>
+                    <h3>Send a Message</h3>
+                    <form class="contact-form" action="mailto:info@lightsec2026.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <select id="contact-subject" name="subject">
+                                <option value="">Select a topic...</option>
+                                <option>Paper Submission</option>
+                                <option>Registration</option>
+                                <option>Sponsorship</option>
+                                <option>Poster Session</option>
+                                <option>Accommodation / Travel</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send via Email Client</button>
+                    </form>
+                </div>
+                <div>
+                    <h3>Direct Contact</h3>
+                    <div class="card">
+                        <h4>📧 Email</h4>
+                        <p style="margin-bottom: 0;"><a href="mailto:info@lightsec2026.com"
+                                style="color: var(--accent-orange); font-weight: 600; font-size: 1.05rem;">info@lightsec2026.com</a>
+                        </p>
+                    </div>
+                    <div class="card" style="margin-top: 1rem;">
+                        <h4>🏛 Workshop Venue</h4>
+                        <p style="margin-bottom: 0;">Akdeniz University<br>Department of Computer Engineering<br>
+                            Antalya, Türkiye</p>
+                    </div>
+                    <div class="card" style="margin-top: 1rem;">
+                        <h4>📅 Workshop Dates</h4>
+                        <p style="margin-bottom: 0;">October 9–10, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p style="margin: 0;">© 2026 LightSec Workshop · Hosted by Akdeniz University, Department of Computer
+            Engineering.</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Shrinking banner on scroll
+        const banner = document.querySelector('.banner');
+        const glassPanel = document.querySelector('.glass-panel');
+
+        function getBannerFullHeight() {
+            return window.innerWidth < 768 ? 360 : 460;
+        }
+
+        const BANNER_MIN = 90;
+
+        function updateBanner() {
+            const scrollY = window.scrollY;
+            const fullHeight = getBannerFullHeight();
+            const newHeight = Math.max(BANNER_MIN, fullHeight - scrollY);
+
+            const range = fullHeight - BANNER_MIN;
+            const progress = Math.min(1, Math.max(0, (fullHeight - newHeight) / range));
+
+            banner.style.height = newHeight + 'px';
+            glassPanel.style.opacity = 1 - progress;
+            glassPanel.style.transform = 'scale(' + (1 - progress * 0.08) + ')';
+        }
+
+        window.addEventListener('scroll', updateBanner);
+        window.addEventListener('resize', updateBanner);
+        updateBanner();
+    </script>
+
+</body>
+
+</html>
