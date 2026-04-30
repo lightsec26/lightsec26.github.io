@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LightSec 2026 - Antalya</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="LightSEC 2026: 7th International Workshop on Lightweight Cryptography for Security & Privacy. October 9-10, 2026 at Akdeniz University, Antalya, Turkey.">
+    <meta name="keywords"
+        content="LightSec 2026, lightweight cryptography, privacy, security, workshop, Akdeniz University, Antalya, turkey, post-quantum cryptography">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lightsec26.github.io/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LightSec 2026 - Antalya">
+    <meta property="og:description"
+        content="LightSEC 2026: 7th International Workshop on Lightweight Cryptography for Security & Privacy. October 9-10, 2026.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lightsec26.github.io/">
+    <meta property="og:image" content="https://lightsec26.github.io/antalya.jpg">
+    <meta property="og:site_name" content="LightSec 2026">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LightSec 2026 - Antalya">
+    <meta name="twitter:description"
+        content="LightSEC 2026: 7th International Workshop on Lightweight Cryptography for Security & Privacy. October 9-10, 2026.">
+
+    <!-- Security Headers (via meta tags for static host) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -43,6 +75,10 @@
             /* Deep Academic Blue */
             --accent-orange: #f37021;
             /* Akdeniz Orange */
+            --primary-blue: #002855;
+            /* Deep Academic Blue */
+            --accent-orange: #f37021;
+            /* Akdeniz Orange */
             --light-bg: #f8f9fa;
             --text-dark: #2c3e50;
             --white: #ffffff;
@@ -66,9 +102,18 @@
         }
 
         /* Banner */
+        /* Sticky site header wraps banner + nav */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Banner */
         .banner {
             width: 100%;
             height: 400px;
+            background-image: url('antalya.jpg');
             background-image: url('antalya.jpg');
             background-size: cover;
             background-position: center;
@@ -78,10 +123,17 @@
             align-items: center;
             padding: 20px;
             overflow: hidden;
+            overflow: hidden;
         }
 
         /* Transparent Glass Panel */
+        /* Transparent Glass Panel */
         .glass-panel {
+            background: rgba(0, 30, 75, 0.25);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 20px;
             background: rgba(0, 30, 75, 0.25);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
@@ -92,6 +144,8 @@
             color: var(--white);
             box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.15);
             will-change: opacity, transform;
+            box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.15);
+            will-change: opacity, transform;
         }
 
         .glass-panel h1 {
@@ -99,12 +153,14 @@
             font-size: 3rem;
             font-weight: 700;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
         }
 
         .glass-panel p.subtitle {
             font-size: 1.4rem;
             margin-top: 0.5rem;
             font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
         }
 
@@ -115,314 +171,439 @@
             opacity: 0.9;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
             letter-spacing: 0.02em;
-        }
 
-        /* Navigation */
-        nav {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .tab-button {
-            background: none;
-            border: none;
-            padding: 1.2rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            color: var(--text-dark);
-            transition: all 0.3s ease;
-            font-weight: 600;
-            border-bottom: 4px solid transparent;
-        }
-
-        .tab-button:hover {
-            color: var(--primary-blue);
-            background-color: #f1f3f5;
-        }
-
-        .tab-button.active {
-            color: var(--primary-blue);
-            border-bottom: 4px solid var(--accent-orange);
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            min-height: 600px;
-        }
-
-        .tab-content {
-            display: none;
-            background-color: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            animation: fadeIn 0.4s ease-out;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h2 {
-            color: var(--primary-blue);
-            border-left: 6px solid var(--accent-orange);
-            padding-left: 1rem;
-            margin-top: 0;
-        }
-
-        h3 {
-            color: var(--text-dark);
-            margin-top: 2rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        h4 {
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Components */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .img-responsive {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            background: white;
-        }
-
-        th,
-        td {
-            text-align: left;
-            padding: 15px;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        th {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            width: 40%;
-        }
-
-        .map-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100% !important;
-            height: 100% !important;
-            border: 0;
-        }
-
-        .sponsor-grid {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .sponsor-placeholder {
-            width: 160px;
-            height: 80px;
-            background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #888;
-            font-weight: bold;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        .direction-link,
-        .profile-link {
-            display: inline-block;
-            margin-top: 5px;
-            color: var(--accent-orange);
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .direction-link:hover,
-        .profile-link:hover {
-            text-decoration: underline;
-        }
-
-        .committee-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .committee-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .committee-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            margin-top: 4rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            margin: 10px 5px;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-orange);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            color: var(--white);
-        }
-
-        .btn-download {
-            background-color: var(--accent-orange);
-        }
-
-        .btn-download:hover {
-            background-color: var(--primary-blue);
-        }
-
-        /* Responsive */
-        /* Responsive */
-        @media (max-width: 768px) {
-
-            .grid-2,
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-
-            /* Banner shrinks initially on mobile */
-            .banner {
-                height: 300px;
-                padding: 15px;
-            }
-
-            .glass-panel h1 {
-                font-size: 1.8rem;
-            }
-
-            .glass-panel p.subtitle {
+            .glass-panel p.venue-date {
+                margin-top: 0.75rem;
                 font-size: 1rem;
+                font-weight: 400;
+                opacity: 0.9;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                letter-spacing: 0.02em;
             }
 
-            .glass-panel {
-                padding: 20px;
-                width: 90%;
+            /* Navigation */
+            nav {
+                background-color: var(--white);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             }
 
-            /* Horizontal Scroll Nav */
             .nav-container {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                justify-content: flex-start;
-                -webkit-overflow-scrolling: touch;
-                padding-bottom: 5px;
-                /* Hide scrollbar spacing */
-            }
-
-            /* Hide scrollbar for Chrome/Safari/Opera */
-            .nav-container::-webkit-scrollbar {
-                display: none;
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
             }
 
             .tab-button {
-                flex: 0 0 auto;
-                padding: 1rem;
-                font-size: 0.9rem;
-                width: auto;
+                background: none;
+                border: none;
+                padding: 1.2rem 1.5rem;
+                font-size: 1rem;
+                cursor: pointer;
+                color: var(--text-dark);
+                transition: all 0.3s ease;
+                font-weight: 600;
                 border-bottom: 4px solid transparent;
             }
 
-            .tab-button.active {
-                border-bottom: 4px solid var(--accent-orange);
+            .tab-button:hover {
+                color: var(--primary-blue);
                 background-color: #f1f3f5;
             }
-        }
+
+            .tab-button.active {
+                color: var(--primary-blue);
+                border-bottom: 4px solid var(--accent-orange);
+            }
+
+            /* Main Content */
+            main {
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+                min-height: 600px;
+            }
+
+            .tab-content {
+                display: none;
+                background-color: var(--white);
+                padding: 2.5rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+                animation: fadeIn 0.4s ease-out;
+            }
+
+            .tab-content.active {
+                display: block;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            h2 {
+                color: var(--primary-blue);
+                border-left: 6px solid var(--accent-orange);
+                padding-left: 1rem;
+                margin-top: 0;
+            }
+
+            h3 {
+                color: var(--text-dark);
+                margin-top: 2rem;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+
+
+            h4 {
+                color: var(--primary-blue);
+                margin-bottom: 0.5rem;
+            }
+
+            /* Components */
+            .grid-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .grid-3 {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .card {
+                background: #f8f9fa;
+                border: 1px solid #e9ecef;
+                border-radius: 8px;
+                padding: 1.5rem;
+                transition: transform 0.2s;
+            }
+
+
+            .card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            .img-responsive {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1rem 0;
+                background: white;
+            }
+
+            th,
+
+            td {
+                text-align: left;
+                padding: 15px;
+                border-bottom: 1px solid #e9ecef;
+            }
+
+            th {
+                background-color: var(--primary-blue);
+                color: var(--white);
+                width: 40%;
+            }
+
+            .map-container {
+                position: relative;
+                padding-bottom: 56.25%;
+
+                /* 16:9 Aspect Ratio */
+                height: 0;
+                overflow: hidden;
+                border-radius: 8px;
+                margin-top: 1rem;
+            }
+
+            .map-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: 100% !important;
+                border: 0;
+            }
+
+            .sponsor-grid {
+                display: flex;
+                gap: 30px;
+                justify-content: center;
+                margin-top: 2rem;
+                flex-wrap: wrap;
+            }
+
+            .sponsor-placeholder {
+                width: 160px;
+                height: 80px;
+                background-color: #eee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #888;
+                font-weight: bold;
+                border-radius: 4px;
+                font-size: 0.9rem;
+            }
+
+            .direction-link,
+            .profile-link {
+
+                .direction-link,
+                .profile-link {
+                    display: inline-block;
+                    margin-top: 5px;
+                    color: var(--accent-orange);
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+
+                .direction-link:hover,
+                .profile-link:hover {
+
+                    .direction-link:hover,
+                    .profile-link:hover {
+                        text-decoration: underline;
+                    }
+
+                    .committee-list {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+
+
+                    .committee-list li {
+                        padding: 10px 0;
+                        border-bottom: 1px solid #eee;
+                    }
+
+
+                    .committee-list li:last-child {
+                        border-bottom: none;
+                    }
+
+                    /* Footer */
+                    footer {
+                        text-align: center;
+                        padding: 2rem;
+                        background-color: var(--primary-blue);
+                        color: var(--white);
+                        margin-top: 4rem;
+                    }
+
+                    .btn {
+                        display: inline-block;
+                        padding: 12px 24px;
+                        background-color: var(--primary-blue);
+                        color: var(--white);
+                        text-decoration: none;
+                        border-radius: 6px;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        border: none;
+                        margin: 10px 5px;
+                    }
+
+                    .btn:hover {
+                        background-color: var(--accent-orange);
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                        color: var(--white);
+                    }
+
+                    .btn-download {
+                        background-color: var(--accent-orange);
+                    }
+
+                    .btn-download:hover {
+                        background-color: var(--primary-blue);
+                    }
+
+                    /* Responsive */
+                    .btn {
+                        display: inline-block;
+                        padding: 12px 24px;
+                        background-color: var(--primary-blue);
+                        color: var(--white);
+                        text-decoration: none;
+                        border-radius: 6px;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        border: none;
+                        margin: 10px 5px;
+                    }
+
+                    .btn:hover {
+                        background-color: var(--accent-orange);
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                        color: var(--white);
+                    }
+
+                    .btn-download {
+                        background-color: var(--accent-orange);
+                    }
+
+                    .btn-download:hover {
+                        background-color: var(--primary-blue);
+                    }
+
+                    /* Responsive */
+                    /* Responsive */
+                    @media (max-width: 768px) {
+
+                        .grid-2,
+                        .grid-3 {
+                            grid-template-columns: 1fr;
+                        }
+
+                        /* Banner shrinks initially on mobile */
+                        .banner {
+                            height: 300px;
+                            padding: 15px;
+                        }
+
+                        .glass-panel h1 {
+                            font-size: 1.8rem;
+                        }
+
+                        .glass-panel p.subtitle {
+                            font-size: 1rem;
+                        }
+
+                        .glass-panel {
+                            padding: 20px;
+                            width: 90%;
+                        }
+
+                        /* Horizontal Scroll Nav */
+                        .nav-container {
+                            flex-wrap: nowrap;
+                            overflow-x: auto;
+                            justify-content: flex-start;
+                            -webkit-overflow-scrolling: touch;
+                            padding-bottom: 5px;
+                            /* Hide scrollbar spacing */
+                        }
+
+                        /* Hide scrollbar for Chrome/Safari/Opera */
+                        .nav-container::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .tab-button {
+                            flex: 0 0 auto;
+                            padding: 1rem;
+                            font-size: 0.9rem;
+                            width: auto;
+                            border-bottom: 4px solid transparent;
+                        }
+
+                        .tab-button.active {
+                            border-bottom: 4px solid var(--accent-orange);
+                            background-color: #f1f3f5;
+                        }
+
+                        .grid-2,
+                        .grid-3 {
+                            grid-template-columns: 1fr;
+                        }
+
+                        /* Banner shrinks initially on mobile */
+                        .banner {
+                            height: 300px;
+                            padding: 15px;
+                        }
+
+                        .glass-panel h1 {
+                            font-size: 1.8rem;
+                        }
+
+                        .glass-panel p.subtitle {
+                            font-size: 1rem;
+                        }
+
+                        .glass-panel {
+                            padding: 20px;
+                            width: 90%;
+                        }
+
+                        /* Horizontal Scroll Nav */
+                        .nav-container {
+                            flex-wrap: nowrap;
+                            overflow-x: auto;
+                            justify-content: flex-start;
+                            -webkit-overflow-scrolling: touch;
+                            padding-bottom: 5px;
+                            /* Hide scrollbar spacing */
+                        }
+
+                        /* Hide scrollbar for Chrome/Safari/Opera */
+                        .nav-container::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .tab-button {
+                            flex: 0 0 auto;
+                            padding: 1rem;
+                            font-size: 0.9rem;
+                            width: auto;
+                            border-bottom: 4px solid transparent;
+                        }
+
+                        .tab-button.active {
+                            border-bottom: 4px solid var(--accent-orange);
+                            background-color: #f1f3f5;
+                        }
+                    }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TSGEDRLXG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5TSGEDRLXG');
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TSGEDRLXG"></script>
 <script>
@@ -441,7 +622,23 @@
             <p class="venue-date">October 9 – 10, 2026 &nbsp;&middot;&nbsp; Akdeniz University, Antalya</p>
         </div>
     </div>
+    <div class="banner">
+        <div class="glass-panel">
+            <h1>LightSec 2026</h1>
+            <p class="venue-date">October 9 – 10, 2026 &nbsp;&middot;&nbsp; Akdeniz University, Antalya</p>
+        </div>
+    </div>
 
+    <nav>
+        <div class="nav-container">
+            <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
+            <button class="tab-button" onclick="openTab(event, 'program')">Program & Submission</button>
+            <button class="tab-button" onclick="openTab(event, 'organization')">Organization</button>
+            <button class="tab-button" onclick="openTab(event, 'venue')">Venue & Travel</button>
+            <button class="tab-button" onclick="openTab(event, 'accommodation')">Accommodation</button>
+            <button class="tab-button" onclick="openTab(event, 'social')">Social Activities</button>
+        </div>
+    </nav>
     <nav>
         <div class="nav-container">
             <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
@@ -596,350 +793,922 @@
                 </p>
             </div>
         </div>
+        <main>
+            <div id="home" class="tab-content active">
+                <h1>7th International Workshop on Lightweight Cryptography for Security & Privacy</h1>
+                <p>LightSEC 2026 promotes and initiates novel research on security, privacy, and trust issues related to
+                    applications that fall under the umbrella of lightweight security. The term “lightweight” refers not
+                    only to conventional constraints on metrics such as computational and communication complexity,
+                    execution time (both throughput and latency), power, energy, area, memory capacity, and bandwidth,
+                    but
+                    also to constraints concerning the sizes of ciphertexts, public and private keys, and the
+                    compactness of
+                    proofs in zero-knowledge protocols. As new applications based on novel and advanced cryptographic
+                    schemes become increasingly ubiquitous and provide immense value to society across sectors such as
+                    AI,
+                    blockchain, IoT, and 5G/6G, they also impact a larger portion of the public, raising numerous
+                    security
+                    and privacy concerns that must be thoroughly addressed before widespread deployment. LightSEC 2026
+                    enthusiastically welcomes papers on algorithms, protocols, techniques, and their secure and
+                    efficient
+                    implementations for applications utilizing advanced cryptographic algorithms such as homomorphic
+                    encryption, zero-knowledge proofs, secure multi-party computation, cryptographic consensus protocols
+                    in
+                    blockchain applications, threshold cryptography, and post-quantum cryptography.</p>
 
-        <div id="program" class="tab-content">
-            <div class="grid-2">
-                <div>
-                    <h2>Call For Papers</h2>
-                    <p>LightSec 2026 enthusiastically welcomes papers on algorithms, protocols, techniques, and their
-                        secure and
-                        efficient implementations for applications utilizing advanced cryptographic algorithms.</p>
+                <div class="grid-2">
+                    <div>
+                        <h3>Objective & Scope</h3>
+                        <p>The main objective of LightSec 2026 is to bring together researchers and practitioners to
+                            discuss:</p>
+                        <ul>
+                            <li>Lightweight Cryptography for IoT</li>
+                            <li>Resource-constrained Security Protocols</li>
+                            <li>Privacy in Edge Computing</li>
+                            <li>Efficient implementations of Post-Quantum Cryptography</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Important Dates</h3>
+                        <div style="overflow-x: auto;">
+                            <table>
+                                <tr>
+                                    <th>Paper submission deadline</th>
+                                    <td>June 19, 2026</td>
+                                </tr>
+                                <tr>
+                                    <th>Author notification</th>
+                                    <td>August 21, 2026</td>
+                                </tr>
+                                <tr>
+                                    <th>Camera ready for pre-conference proceedings</th>
+                                    <td>September 21, 2026</td>
+                                </tr>
+                                <tr>
+                                    <th>Camera ready for post-conference proceedings</th>
+                                    <td>October 26, 2026</td>
+                                </tr>
+                                <tr>
+                                    <th>Workshop date</th>
+                                    <td>October 9-10, 2026</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
-                    <div style="margin: 20px 0;">
-                        <a href="LightSEC_2026_CfP.pdf" class="btn btn-download" download>Download Call for Papers</a>
-                        <a href="LightSec2026poster.pdf" class="btn btn-download" download>Download Poster</a>
+
+
+                <div class="grid-2">
+                    <div>
+                        <h3>Sponsoring Institutions</h3>
+                        <div class="sponsor-grid" style="justify-content: flex-start; gap: 10px;">
+                            <a href="https://www.akdeniz.edu.tr/" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: 100%; max-width: 320px; display: flex; align-items: center; justify-content: flex-start; padding: 10px 15px; height: auto;">
+                                <img src="logos/akdeniz.png" alt="Akdeniz University Logo"
+                                    style="height: 40px; margin-right: 12px; object-fit: contain;">
+                                <span>Akdeniz University</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Powered By</h3>
+                        <div class="sponsor-grid" style="justify-content: flex-start; gap: 15px;">
+                            <!-- Akdeniz -->
+                            <a href="https://www.akdeniz.edu.tr/" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/akdeniz.png" alt="Akdeniz Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>Akdeniz University</span>
+                            </a>
+                            <!-- Antalya Bilim -->
+                            <a href="https://antalya.edu.tr/" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/antalyabilim.png" alt="Antalya Bilim Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>Antalya Bilim University</span>
+                            </a>
+                            <!-- Sabanci -->
+                            <a href="https://sabanciuniv.edu/" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/sabanci.png" alt="Sabanci Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>Sabanci University</span>
+                            </a>
+                            <!-- IYTE -->
+                            <a href="https://iyte.edu.tr/" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/iyte.png" alt="IYTE Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>Izmir Institute of Technology</span>
+                            </a>
+                            <!-- Tartu -->
+                            <a href="https://ut.ee/en" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/tartu.png" alt="Tartu Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>University of Tartu</span>
+                            </a>
+                            <!-- ASELSAN -->
+                            <a href="https://www.aselsan.com/tr" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/aselsan.png" alt="ASELSAN Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>ASELSAN</span>
+                            </a>
+                            <!-- TUBITAK BILGEM -->
+                            <a href="https://bilgem.tubitak.gov.tr/uekae/" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/bilgem.png" alt="BILGEM Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>TÜBİTAK BİLGEM UEKAE</span>
+                            </a>
+                            <!-- FAME -->
+                            <a href="https://famecrypt.com.tr/" target="_blank" class="sponsor-placeholder"
+                                style="text-decoration: none; width: auto; padding: 8px 15px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                                <img src="logos/fame.png" alt="FAME Logo"
+                                    style="height: 30px; margin-right: 10px; object-fit: contain;">
+                                <span>FAME CRYPT</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <h3>Contact Us</h3>
+                    <p>For any inquiries regarding LightSec 2026, please reach out to us at:</p>
+                    <p><a href="mailto:info@lightsec2026.com" class="profile-link"
+                            style="color: var(--primary-blue); font-weight: bold; font-size: 1.2rem;">info@lightsec2026.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="program" class="tab-content">
+                <div class="grid-2">
+                    <div>
+                        <h2>Call For Papers</h2>
+                        <p>LightSec 2026 enthusiastically welcomes papers on algorithms, protocols, techniques, and
+                            their
+                            secure and
+                            efficient implementations for applications utilizing advanced cryptographic algorithms.</p>
+
+                        <div style="margin: 20px 0;">
+                            <a href="LightSEC_2026_CfP.pdf" class="btn btn-download" download>Download Call for
+                                Papers</a>
+                            <a href="LightSec2026poster.pdf" class="btn btn-download" download>Download Poster</a>
+                        </div>
+                        <div id="program" class="tab-content">
+                            <div class="grid-2">
+                                <div>
+                                    <h2>Call For Papers</h2>
+                                    <p>LightSec 2026 enthusiastically welcomes papers on algorithms, protocols,
+                                        techniques, and their
+                                        secure and
+                                        efficient implementations for applications utilizing advanced cryptographic
+                                        algorithms.</p>
+
+                                    <div style="margin: 20px 0;">
+                                        <a href="LightSEC_2026_CfP.pdf" class="btn btn-download" download>Download Call
+                                            for Papers</a>
+                                        <a href="LightSec2026poster.pdf" class="btn btn-download" download>Download
+                                            Poster</a>
+                                    </div>
+
+                                    <h3>Topics of Interest</h3>
+                                    <p>We invite submissions on a wide range of topics, including but not limited to:
+                                    </p>
+                                    <ul style="columns: 1; margin-top: 1rem; padding-left: 20px;">
+                                        <li>Design, analysis and implementation of lightweight cryptographic schemes
+                                        </li>
+                                        <li>Cryptographic hardware development for constrained domains</li>
+                                        <li>Side channel and fault analysis and countermeasures</li>
+                                        <li>Efficient and secure post-quantum cryptographic algorithms</li>
+                                        <li>Security and privacy solutions for 5G/6G networks</li>
+                                        <li>Security and privacy solutions for IoT</li>
+                                        <li>Fast, efficient and secure acceleration solutions</li>
+                                        <li>Cryptographic solutions for RISC-V ecosystem</li>
+                                        <li>Lightweight solutions for privacy-preserving ML on edge</li>
+                                        <li>Efficient cryptographic solutions for blockchain</li>
+                                        <li>Formal methods for analysis of lightweight protocols</li>
+                                        <li>AI for cryptography & Security implications of AI</li>
+                                    </ul>
+                                </div>
+                                <div style="text-align: center;">
+                                    <img src="poster.png" alt="LightSec 2026 Poster"
+                                        style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 2rem;">
+                                <h3>Submission Instructions</h3>
+                                <p>Authors are invited to submit original research papers. All submissions will be
+                                    double-blind
+                                    peer-reviewed. Detailed formatting instructions and the submission link (EasyChair)
+                                    will be provided
+                                    here shortly.</p>
+                                <p>The submissions must be anonymous with no author names, affiliations or obvious
+                                    references.
+                                    Submissions
+                                    must not substantially duplicate work that any of the authors has published in a
+                                    journal or a
+                                    conference/workshop with proceedings or has submitted/is planning to submit before
+                                    the author
+                                    notification deadline to a journal or other conferences/workshops that have
+                                    proceedings. Accepted
+                                    submissions may not appear in any other conference or workshop that has proceedings.
+                                </p>
+                                <p>The proceedings will be published in Springer-Verlag’s LNCS series. Hence, the final
+                                    version of
+                                    accepted
+                                    papers will have to follow the <a
+                                        href="https://www.springer.com/gp/computer-science/lncs" target="_blank"
+                                        style="color: var(--accent-orange); font-weight: bold;">LNCS guidelines</a>
+                                    using
+                                    Springer’s standard fonts, font sizes, and margins with a total page limit of 20
+                                    pages including
+                                    references and appendices.</p>
+                                <p>Submissions to LightSec 2026 must follow the same format. Clearly marked
+                                    supplementary materials may
+                                    be
+                                    appended without a page limit, but reviewers are neither required to read them nor
+                                    will they be
+                                    printed
+                                    in the proceedings. Hence papers must be intelligible and self-contained within the
+                                    20 page bound.
+                                </p>
+
+                                <div style="text-align: center; margin-top: 2rem;">
+                                    <a href="#" class="btn"
+                                        style="background-color: #ccc; cursor: not-allowed; opacity: 0.7;">Submit
+                                        Paper (Link Coming Soon)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Topics of Interest</h3>
+                        <p>We invite submissions on a wide range of topics, including but not limited to:</p>
+                        <ul style="columns: 1; margin-top: 1rem; padding-left: 20px;">
+                            <li>Design, analysis and implementation of lightweight cryptographic schemes</li>
+                            <li>Cryptographic hardware development for constrained domains</li>
+                            <li>Side channel and fault analysis and countermeasures</li>
+                            <li>Efficient and secure post-quantum cryptographic algorithms</li>
+                            <li>Security and privacy solutions for 5G/6G networks</li>
+                            <li>Security and privacy solutions for IoT</li>
+                            <li>Fast, efficient and secure acceleration solutions</li>
+                            <li>Cryptographic solutions for RISC-V ecosystem</li>
+                            <li>Lightweight solutions for privacy-preserving ML on edge</li>
+                            <li>Efficient cryptographic solutions for blockchain</li>
+                            <li>Formal methods for analysis of lightweight protocols</li>
+                            <li>AI for cryptography & Security implications of AI</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="poster.png" alt="LightSec 2026 Poster"
+                            style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3>Submission Instructions</h3>
+                    <p>Authors are invited to submit original research papers. All submissions will be double-blind
+                        peer-reviewed. Detailed formatting instructions and the submission link (EasyChair) will be
+                        provided
+                        here shortly.</p>
+                    <p>The submissions must be anonymous with no author names, affiliations or obvious references.
+                        Submissions
+                        must not substantially duplicate work that any of the authors has published in a journal or a
+                        conference/workshop with proceedings or has submitted/is planning to submit before the author
+                        notification deadline to a journal or other conferences/workshops that have proceedings.
+                        Accepted
+                        submissions may not appear in any other conference or workshop that has proceedings.</p>
+                    <p>The proceedings will be published in Springer-Verlag’s LNCS series. Hence, the final version of
+                        accepted
+                        papers will have to follow the <a href="https://www.springer.com/gp/computer-science/lncs"
+                            target="_blank" style="color: var(--accent-orange); font-weight: bold;">LNCS guidelines</a>
+                        using
+                        Springer’s standard fonts, font sizes, and margins with a total page limit of 20 pages including
+                        references and appendices.</p>
+                    <p>Submissions to LightSec 2026 must follow the same format. Clearly marked supplementary materials
+                        may
+                        be
+                        appended without a page limit, but reviewers are neither required to read them nor will they be
+                        printed
+                        in the proceedings. Hence papers must be intelligible and self-contained within the 20 page
+                        bound.
+                    </p>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="#" class="btn"
+                            style="background-color: #ccc; cursor: not-allowed; opacity: 0.7;">Submit
+                            Paper (Link Coming Soon)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="organization" class="tab-content">
+                <h2>Organization</h2>
+
+                <div class="grid-2">
+                    <div>
+                        <div class="card" style="margin-bottom: 10px;">
+                            <h3>General Chair</h3>
+                            <p><strong><a href="https://avesis.akdeniz.edu.tr/ahmetsinak" target="_blank"
+                                        style="color: inherit; text-decoration: none;">Ahmet Sınak</a></strong><br>
+                                Akdeniz University, Türkiye<br>
+                                <a href="mailto:ahmetsinak@akdeniz.edu.tr" class="profile-link"
+                                    style="color: var(--primary-blue); font-weight: normal;">ahmetsinak@akdeniz.edu.tr</a>
+                            </p>
+                        </div>
+                        <div id="organization" class="tab-content">
+                            <h2>Organization</h2>
+
+                            <div class="grid-2">
+                                <div>
+                                    <div class="card" style="margin-bottom: 10px;">
+                                        <h3>General Chair</h3>
+                                        <p><strong><a href="https://avesis.akdeniz.edu.tr/ahmetsinak" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Ahmet
+                                                    Sınak</a></strong><br>
+                                            Akdeniz University, Türkiye<br>
+                                            <a href="mailto:ahmetsinak@akdeniz.edu.tr" class="profile-link"
+                                                style="color: var(--primary-blue); font-weight: normal;">ahmetsinak@akdeniz.edu.tr</a>
+                                        </p>
+                                    </div>
+
+                                    <div class="card">
+                                        <h3>Program Co-Chairs</h3>
+                                        <p><strong><a href="https://ece.ncsu.edu/people/aaysu/" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Aydın
+                                                    Aysu</a></strong><br>
+                                            Electrical and Computer Engineering, North Carolina State University,
+                                            USA<br>
+                                            <a href="mailto:aaysu@ncsu.edu" class="profile-link"
+                                                style="color: var(--primary-blue); font-weight: normal;">aaysu@ncsu.edu</a>
+                                        </p>
+
+                                        <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+
+                                        <p><strong><a
+                                                    href="https://www.barkhauseninstitut.org/en/people/elif-bilge-kavun"
+                                                    target="_blank" style="color: inherit; text-decoration: none;">Elif
+                                                    Bilge
+                                                    Kavun</a></strong><br>
+                                            Faculty of Computer Science, Dresden University of Technology, Dresden,
+                                            Germany<br>
+                                            <a href="mailto:elif.kavun@barkhauseninstitut.org" class="profile-link"
+                                                style="color: var(--primary-blue); font-weight: normal;">elif.kavun@barkhauseninstitut.org</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <h3>Program Co-Chairs</h3>
+                                    <p><strong><a href="https://ece.ncsu.edu/people/aaysu/" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Aydın
+                                                Aysu</a></strong><br>
+                                        Electrical and Computer Engineering, North Carolina State University, USA<br>
+                                        <a href="mailto:aaysu@ncsu.edu" class="profile-link"
+                                            style="color: var(--primary-blue); font-weight: normal;">aaysu@ncsu.edu</a>
+                                    </p>
+
+                                    <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+
+                                    <p><strong><a href="https://www.barkhauseninstitut.org/en/people/elif-bilge-kavun"
+                                                target="_blank" style="color: inherit; text-decoration: none;">Elif
+                                                Bilge
+                                                Kavun</a></strong><br>
+                                        Faculty of Computer Science, Dresden University of Technology, Dresden,
+                                        Germany<br>
+                                        <a href="mailto:elif.kavun@barkhauseninstitut.org" class="profile-link"
+                                            style="color: var(--primary-blue); font-weight: normal;">elif.kavun@barkhauseninstitut.org</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <h3>Organizing Committee</h3>
+                                <ul class="committee-list">
+                                    <li>
+                                        <strong><a href="https://avesis.akdeniz.edu.tr/muratak" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Murat Ak</a></strong>,
+                                        Akdeniz
+                                        University, Antalya
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://ut.ee/en/employee/sedat-akleylek" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Sedat
+                                                Akleylek</a></strong>,
+                                        University of Tartu, Estonia
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://avesis.akdeniz.edu.tr/alkan" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Mustafa
+                                                Alkan</a></strong>, Akdeniz
+                                        University, Antalya
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://avesis.metu.edu.tr/melisa" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Melis Aslan</a></strong>,
+                                        FAME CRYPT
+                                    </li>
+                                    <li>
+                                        <strong><a
+                                                href="https://antalya.edu.tr/tr/akademik-kadro/muhendislik-fakultesi/asli-bay"
+                                                target="_blank" style="color: inherit; text-decoration: none;">Aslı
+                                                Bay</a></strong>, Antalya Bilim University, Antalya
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://cse.iyte.edu.tr/doc-dr-orhun-kara/" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Orhun Kara</a></strong>,
+                                        İzmir
+                                        Institute of Technology, İzmir
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://scholar.google.com/citations?user=_5P5suEAAAAJ"
+                                                target="_blank" style="color: inherit; text-decoration: none;">Neşe
+                                                Koçak</a></strong>, ASELSAN
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://sites.google.com/view/kamilotal/home" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Kamil Otal</a></strong>,
+                                        TÜBİTAK-BİLGEM
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://avesis.akdeniz.edu.tr/mozdemir" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Mustafa
+                                                Özdemir</a></strong>, Akdeniz
+                                        University, Antalya
+                                    </li>
+                                    <li>
+                                        <strong><a href="https://people.sabanciuniv.edu/erkays/" target="_blank"
+                                                style="color: inherit; text-decoration: none;">Erkay Savaş</a></strong>,
+                                        Sabanci
+                                        University, İstanbul
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card" style="margin-top: 10px;">
+                            <h3>Program Committee</h3>
+                            <ul class="committee-list" style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                                <li><strong>Sedat Akleylek</strong>, University of Tartu</li>
+                                <li><strong>Erdem Alkım</strong>, Ondokuz Mayıs University</li>
+                                <li><strong>Aydın Aysu</strong>, North Carolina State University</li>
+                                <li><strong>Reza Azarderakhsh</strong>, Florida Atlantic University</li>
+                                <li><strong>Lejla Batina</strong>, Radboud University</li>
+                                <li><strong>Christof Beierle</strong>, Ruhr University Bochum</li>
+                                <li><strong>Shivam Bhasin</strong>, Nanyang Technological University</li>
+                                <li><strong>Begül Bilgin</strong>, Rambus</li>
+                                <li><strong>Rosario Cammarota</strong>, Intel Labs</li>
+                                <li><strong>Yarkın Doröz</strong>, NVIDIA</li>
+                                <li><strong>Krzysztof M. Gaj</strong>, George Mason University</li>
+                                <li><strong>Shibam Ghosh</strong>, University of Haifa</li>
+                                <li><strong>Lorenzo Grassi</strong>, Eindhoven University of Technology</li>
+                                <li><strong>Tim Güneysu</strong>, Ruhr University Bochum</li>
+                                <li><strong>Emad Heydari Beni</strong>, COSIC, KU Leuven & Nokia Bell Labs</li>
+                                <li><strong>Orhun Kara</strong>, İzmir Institute of Technology</li>
+                                <li><strong>Koray Karabina</strong>, University of Waterloo</li>
+                                <li><strong>Elif Bilge Kavun</strong>, Dresden University of Technology</li>
+                                <li><strong>Ayesha Khalid</strong>, Queen’s University Belfast</li>
+                                <li><strong>Gregor Leander</strong>, Ruhr University Bochum</li>
+                                <li><strong>Amir Moradi</strong>, Darmstadt Technical University</li>
+                                <li><strong>Mehran Mozaffari Kermani</strong>, University of South Florida</li>
+                                <li><strong>Debdeep Mukhopadhyay</strong>, Indian Institute of Technology Kharagpur</li>
+                                <li><strong>Köksal Mus</strong>, Worcester Polytechnic Institute</li>
+                                <li><strong>Elisabeth Oswald</strong>, University of Birmingham</li>
+                                <li><strong>Kamil Otal</strong>, TÜBİTAK BİLGEM</li>
+                                <li><strong>Melek Önen</strong>, EURECOM</li>
+                                <li><strong>Svetla Petkova-Nikova</strong>, KU Leuven</li>
+                                <li><strong>Rachel Player</strong>, Royal Holloway, University of London</li>
+                                <li><strong>Shahram Rasoolzadeh</strong>, Ruhr University Bochum</li>
+                                <li><strong>Francisco Rodríguez-Henríquez</strong>, Technology Innovation Institute –
+                                    Cryptography
+                                    Research Centre</li>
+                                <li><strong>Kurt Rohloff</strong>, Duality Technologies</li>
+                                <li><strong>Erkay Savaş</strong>, Sabancı University</li>
+                                <li><strong>Özgür Sinanoğlu</strong>, New York University Abu Dhabi</li>
+                                <li><strong>Sujoy Sinha Roy</strong>, Graz University of Technology</li>
+                                <li><strong>Meltem Sönmez Turan</strong>, NIST</li>
+                                <li><strong>Cihangir Tezcan</strong>, Middle East Technical University</li>
+                                <div class="card">
+                                    <h3>Organizing Committee</h3>
+                                    <ul class="committee-list">
+                                        <li>
+                                            <strong><a href="https://avesis.akdeniz.edu.tr/muratak" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Murat
+                                                    Ak</a></strong>, Akdeniz
+                                            University, Antalya
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://ut.ee/en/employee/sedat-akleylek" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Sedat
+                                                    Akleylek</a></strong>,
+                                            University of Tartu, Estonia
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://avesis.akdeniz.edu.tr/alkan" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Mustafa
+                                                    Alkan</a></strong>, Akdeniz
+                                            University, Antalya
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://avesis.metu.edu.tr/melisa" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Melis
+                                                    Aslan</a></strong>, FAME CRYPT
+                                        </li>
+                                        <li>
+                                            <strong><a
+                                                    href="https://antalya.edu.tr/tr/akademik-kadro/muhendislik-fakultesi/asli-bay"
+                                                    target="_blank" style="color: inherit; text-decoration: none;">Aslı
+                                                    Bay</a></strong>, Antalya Bilim University, Antalya
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://cse.iyte.edu.tr/doc-dr-orhun-kara/" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Orhun
+                                                    Kara</a></strong>, İzmir
+                                            Institute of Technology, İzmir
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://scholar.google.com/citations?user=_5P5suEAAAAJ"
+                                                    target="_blank" style="color: inherit; text-decoration: none;">Neşe
+                                                    Koçak</a></strong>, ASELSAN
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://sites.google.com/view/kamilotal/home"
+                                                    target="_blank" style="color: inherit; text-decoration: none;">Kamil
+                                                    Otal</a></strong>,
+                                            TÜBİTAK-BİLGEM
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://avesis.akdeniz.edu.tr/mozdemir" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Mustafa
+                                                    Özdemir</a></strong>, Akdeniz
+                                            University, Antalya
+                                        </li>
+                                        <li>
+                                            <strong><a href="https://people.sabanciuniv.edu/erkays/" target="_blank"
+                                                    style="color: inherit; text-decoration: none;">Erkay
+                                                    Savaş</a></strong>, Sabanci
+                                            University, İstanbul
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+
+                        <div class="card" style="margin-top: 10px;">
+                            <h3>Program Committee</h3>
+                            <ul class="committee-list" style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                                <li><strong>Sedat Akleylek</strong>, University of Tartu</li>
+                                <li><strong>Erdem Alkım</strong>, Ondokuz Mayıs University</li>
+                                <li><strong>Aydın Aysu</strong>, North Carolina State University</li>
+                                <li><strong>Reza Azarderakhsh</strong>, Florida Atlantic University</li>
+                                <li><strong>Lejla Batina</strong>, Radboud University</li>
+                                <li><strong>Christof Beierle</strong>, Ruhr University Bochum</li>
+                                <li><strong>Shivam Bhasin</strong>, Nanyang Technological University</li>
+                                <li><strong>Begül Bilgin</strong>, Rambus</li>
+                                <li><strong>Rosario Cammarota</strong>, Intel Labs</li>
+                                <li><strong>Yarkın Doröz</strong>, NVIDIA</li>
+                                <li><strong>Krzysztof M. Gaj</strong>, George Mason University</li>
+                                <li><strong>Shibam Ghosh</strong>, University of Haifa</li>
+                                <li><strong>Lorenzo Grassi</strong>, Eindhoven University of Technology</li>
+                                <li><strong>Tim Güneysu</strong>, Ruhr University Bochum</li>
+                                <li><strong>Emad Heydari Beni</strong>, COSIC, KU Leuven & Nokia Bell Labs</li>
+                                <li><strong>Orhun Kara</strong>, İzmir Institute of Technology</li>
+                                <li><strong>Koray Karabina</strong>, University of Waterloo</li>
+                                <li><strong>Elif Bilge Kavun</strong>, Dresden University of Technology</li>
+                                <li><strong>Ayesha Khalid</strong>, Queen’s University Belfast</li>
+                                <li><strong>Gregor Leander</strong>, Ruhr University Bochum</li>
+                                <li><strong>Amir Moradi</strong>, Darmstadt Technical University</li>
+                                <li><strong>Mehran Mozaffari Kermani</strong>, University of South Florida</li>
+                                <li><strong>Debdeep Mukhopadhyay</strong>, Indian Institute of Technology Kharagpur</li>
+                                <li><strong>Köksal Mus</strong>, Worcester Polytechnic Institute</li>
+                                <li><strong>Elisabeth Oswald</strong>, University of Birmingham</li>
+                                <li><strong>Kamil Otal</strong>, TÜBİTAK BİLGEM</li>
+                                <li><strong>Melek Önen</strong>, EURECOM</li>
+                                <li><strong>Svetla Petkova-Nikova</strong>, KU Leuven</li>
+                                <li><strong>Rachel Player</strong>, Royal Holloway, University of London</li>
+                                <li><strong>Shahram Rasoolzadeh</strong>, Ruhr University Bochum</li>
+                                <li><strong>Francisco Rodríguez-Henríquez</strong>, Technology Innovation Institute –
+                                    Cryptography
+                                    Research Centre</li>
+                                <li><strong>Kurt Rohloff</strong>, Duality Technologies</li>
+                                <li><strong>Erkay Savaş</strong>, Sabancı University</li>
+                                <li><strong>Özgür Sinanoğlu</strong>, New York University Abu Dhabi</li>
+                                <li><strong>Sujoy Sinha Roy</strong>, Graz University of Technology</li>
+                                <li><strong>Meltem Sönmez Turan</strong>, NIST</li>
+                                <li><strong>Cihangir Tezcan</strong>, Middle East Technical University</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="venue" class="tab-content">
+                <h2>Venue & Travel</h2>
+
+                <p>The conference will be held at <strong>Akdeniz University</strong>, located in the Konyaaltı district
+                    of
+                    Antalya.</p>
+                <div id="venue" class="tab-content">
+                    <h2>Venue & Travel</h2>
+
+                    <p>The conference will be held at <strong>Akdeniz University</strong>, located in the Konyaaltı
+                        district of
+                        Antalya.</p>
+
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1353.8975366123836!2d30.66120669131983!3d36.891864962961634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c391cda532111d%3A0xf6604662f3787130!2sAkdeniz%20%C3%9Cniversitesi%20Sosyal%20Tesisler!5e1!3m2!1sen!2sus!4v1770926942850!5m2!1sen!2sus"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1353.8975366123836!2d30.66120669131983!3d36.891864962961634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c391cda532111d%3A0xf6604662f3787130!2sAkdeniz%20%C3%9Cniversitesi%20Sosyal%20Tesisler!5e1!3m2!1sen!2sus!4v1770926942850!5m2!1sen!2sus"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <h3>Topics of Interest</h3>
-                    <p>We invite submissions on a wide range of topics, including but not limited to:</p>
-                    <ul style="columns: 1; margin-top: 1rem; padding-left: 20px;">
-                        <li>Design, analysis and implementation of lightweight cryptographic schemes</li>
-                        <li>Cryptographic hardware development for constrained domains</li>
-                        <li>Side channel and fault analysis and countermeasures</li>
-                        <li>Efficient and secure post-quantum cryptographic algorithms</li>
-                        <li>Security and privacy solutions for 5G/6G networks</li>
-                        <li>Security and privacy solutions for IoT</li>
-                        <li>Fast, efficient and secure acceleration solutions</li>
-                        <li>Cryptographic solutions for RISC-V ecosystem</li>
-                        <li>Lightweight solutions for privacy-preserving ML on edge</li>
-                        <li>Efficient cryptographic solutions for blockchain</li>
-                        <li>Formal methods for analysis of lightweight protocols</li>
-                        <li>AI for cryptography & Security implications of AI</li>
-                    </ul>
-                </div>
-                <div style="text-align: center;">
-                    <img src="poster.png" alt="LightSec 2026 Poster"
-                        style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+                    <h3>How to Get There</h3>
+
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>From Antalya Airport (AYT)</h4>
+                            <p><strong>By Taxi:</strong> Taxis are available 24/7 at the arrival terminals. The ride to
+                                the
+                                university takes about 25-30 minutes.</p>
+                            <p><strong>By Tram (Antray):</strong> You can take the tram from the Airport station
+                                directly to the
+                                city center and transfer to the bus lines or take the tram towards Fatih and get off at
+                                the
+                                nearest stop to the campus.</p>
+                            <p><strong>By Bus:</strong> Municipal bus number 600 or 800 connects the airport to the city
+                                center/bus terminal.</p>
+                        </div>
+                        <h3>How to Get There</h3>
+
+                        <div class="grid-2">
+                            <div class="card">
+                                <h4>From Antalya Airport (AYT)</h4>
+                                <p><strong>By Taxi:</strong> Taxis are available 24/7 at the arrival terminals. The ride
+                                    to the
+                                    university takes about 25-30 minutes.</p>
+                                <p><strong>By Tram (Antray):</strong> You can take the tram from the Airport station
+                                    directly to the
+                                    city center and transfer to the bus lines or take the tram towards Fatih and get off
+                                    at the
+                                    nearest stop to the campus.</p>
+                                <p><strong>By Bus:</strong> Municipal bus number 600 or 800 connects the airport to the
+                                    city
+                                    center/bus terminal.</p>
+                            </div>
+
+                            <div class="card">
+                                <h4>Arriving by Car</h4>
+                                <p>Akdeniz University is located near the D400 highway.</p>
+
+                                <p><strong>From West (Kemer/Muğla):</strong><br>
+                                    Follow D400 towards Antalya Center. The university will be on your right as you
+                                    enter the
+                                    city.<br>
+                                    <a href="https://maps.app.goo.gl/pkC7kTVwN9GQdnvW9" class="direction-link"
+                                        target="_blank">Get
+                                        Directions →</a>
+                                </p>
+
+                                <p><strong>From East (Airport(AYT)/Alanya/Side):</strong><br>
+                                    Follow D400 through the city, following signs for Akdeniz Universitesi.<br>
+                                    <a href="https://maps.app.goo.gl/H7ej78UbUcxWUz73A" class="direction-link"
+                                        target="_blank">Get
+                                        Directions →</a>
+                                </p>
+
+                                <p><strong>From North (Istanbul/Ankara/Izmir):</strong><br>
+                                    Follow D650 and Antalya Bulvari towards Antalya City Center and then Dumlupinar
+                                    Bulvari towards
+                                    Akdeniz University.<br>
+                                    <a href="https://maps.app.goo.gl/EYqxU2pFeAN1Wz877" class="direction-link"
+                                        target="_blank">Get
+                                        Directions →</a>
+                                </p>
+                                <div class="card">
+                                    <h4>Arriving by Car</h4>
+                                    <p>Akdeniz University is located near the D400 highway.</p>
+
+                                    <p><strong>From West (Kemer/Muğla):</strong><br>
+                                        Follow D400 towards Antalya Center. The university will be on your right as you
+                                        enter the
+                                        city.<br>
+                                        <a href="https://maps.app.goo.gl/pkC7kTVwN9GQdnvW9" class="direction-link"
+                                            target="_blank">Get
+                                            Directions →</a>
+                                    </p>
+
+                                    <p><strong>From East (Airport(AYT)/Alanya/Side):</strong><br>
+                                        Follow D400 through the city, following signs for Akdeniz Universitesi.<br>
+                                        <a href="https://maps.app.goo.gl/H7ej78UbUcxWUz73A" class="direction-link"
+                                            target="_blank">Get
+                                            Directions →</a>
+                                    </p>
+
+                                    <p><strong>From North (Istanbul/Ankara/Izmir):</strong><br>
+                                        Follow D650 and Antalya Bulvari towards Antalya City Center and then Dumlupinar
+                                        Bulvari towards
+                                        Akdeniz University.<br>
+                                        <a href="https://maps.app.goo.gl/EYqxU2pFeAN1Wz877" class="direction-link"
+                                            target="_blank">Get
+                                            Directions →</a>
+                                    </p>
+
+                                    <p style="margin-top: 15px; font-style: italic; color: #666;">Parking is available
+                                        on campus (Guest
+                                        verification may be required at the gate).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px; font-style: italic; color: #666;">Parking is available on campus
+                            (Guest
+                            verification may be required at the gate).</p>
+                    </div>
                 </div>
             </div>
 
-            <div style="margin-top: 2rem;">
-                <h3>Submission Instructions</h3>
-                <p>Authors are invited to submit original research papers. All submissions will be double-blind
-                    peer-reviewed. Detailed formatting instructions and the submission link (EasyChair) will be provided
-                    here shortly.</p>
-                <p>The submissions must be anonymous with no author names, affiliations or obvious references.
-                    Submissions
-                    must not substantially duplicate work that any of the authors has published in a journal or a
-                    conference/workshop with proceedings or has submitted/is planning to submit before the author
-                    notification deadline to a journal or other conferences/workshops that have proceedings. Accepted
-                    submissions may not appear in any other conference or workshop that has proceedings.</p>
-                <p>The proceedings will be published in Springer-Verlag’s LNCS series. Hence, the final version of
-                    accepted
-                    papers will have to follow the <a href="https://www.springer.com/gp/computer-science/lncs"
-                        target="_blank" style="color: var(--accent-orange); font-weight: bold;">LNCS guidelines</a>
-                    using
-                    Springer’s standard fonts, font sizes, and margins with a total page limit of 20 pages including
-                    references and appendices.</p>
-                <p>Submissions to LightSec 2026 must follow the same format. Clearly marked supplementary materials may
-                    be
-                    appended without a page limit, but reviewers are neither required to read them nor will they be
-                    printed
-                    in the proceedings. Hence papers must be intelligible and self-contained within the 20 page bound.
-                </p>
+            <div id="accommodation" class="tab-content">
+                <h2>Accommodation</h2>
+                <p>We recommend the following accommodation option located directly on the university campus for your
+                    convenience.</p>
+                <div id="accommodation" class="tab-content">
+                    <h2>Accommodation</h2>
+                    <p>We recommend the following accommodation option located directly on the university campus for
+                        your
+                        convenience.</p>
 
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="#" class="btn" style="background-color: #ccc; cursor: not-allowed; opacity: 0.7;">Submit
-                        Paper (Link Coming Soon)</a>
-                </div>
-            </div>
-        </div>
+                    <div class="card">
+                        <h3>Akdeniz University Social Facilities (Sosyal Tesisleri)</h3>
+                        <p><strong>Location:</strong> Within the Akdeniz University Campus (Walking distance to the
+                            venue).</p>
+                        <p>The Social Facilities offer comfortable rooms in a peaceful environment right next to the
+                            conference
+                            venue. It is the most convenient option for attendees.</p>
 
-        <div id="organization" class="tab-content">
-            <h2>Organization</h2>
+                        <p><strong>Booking:</strong><br>
+                            Please contact the facility directly to make a reservation, mentioning "LightSec 2026".</p>
 
-            <div class="grid-2">
-                <div>
-                    <div class="card" style="margin-bottom: 10px;">
-                        <h3>General Chair</h3>
-                        <p><strong><a href="https://avesis.akdeniz.edu.tr/ahmetsinak" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Ahmet Sınak</a></strong><br>
-                            Akdeniz University, Türkiye<br>
-                            <a href="mailto:ahmetsinak@akdeniz.edu.tr" class="profile-link"
-                                style="color: var(--primary-blue); font-weight: normal;">ahmetsinak@akdeniz.edu.tr</a>
+                        <p>
+                            <strong>Phone:</strong> +90 242 227 44 00 (Placeholder)<br>
+                            <strong>Email:</strong> sosyaltesisler@akdeniz.edu.tr (Placeholder)
                         </p>
+
+                        <a href="#" class="direction-link" style="color: var(--primary-blue);">Visit Website (Coming
+                            Soon)</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Akdeniz University Social Facilities (Sosyal Tesisleri)</h3>
+                    <p><strong>Location:</strong> Within the Akdeniz University Campus (Walking distance to the venue).
+                    </p>
+                    <p>The Social Facilities offer comfortable rooms in a peaceful environment right next to the
+                        conference
+                        venue. It is the most convenient option for attendees.</p>
+
+                    <p><strong>Booking:</strong><br>
+                        Please contact the facility directly to make a reservation, mentioning "LightSec 2026".</p>
+
+                    <p>
+                        <strong>Phone:</strong> +90 242 227 44 00 (Placeholder)<br>
+                        <strong>Email:</strong> sosyaltesisler@akdeniz.edu.tr (Placeholder)
+                    </p>
+
+                    <a href="#" class="direction-link" style="color: var(--primary-blue);">Visit Website (Coming
+                        Soon)</a>
+                </div>
+            </div>
+
+            <div id="social" class="tab-content">
+                <h2>Social Program</h2>
+                <p>Antalya offers a unique blend of history, nature, and sea. We have organized a main event, but also
+                    provide suggestions for those wishing to explore on their own.</p>
+                <div id="social" class="tab-content">
+                    <h2>Social Program</h2>
+                    <p>Antalya offers a unique blend of history, nature, and sea. We have organized a main event, but
+                        also
+                        provide suggestions for those wishing to explore on their own.</p>
+
+                    <div
+                        style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 5px solid #2196f3; margin-bottom: 30px;">
+                        <h3 style="margin-top:0; color: #0d47a1;">Main Event: Rafting in Köprülü Canyon</h3>
+                        <div class="grid-2">
+                            <div>
+                                <p><strong>Date:</strong> October 11, 2026</p>
+                                <p>Join us for an adrenaline-filled day at Köprülü Canyon National Park. The rafting
+                                    course is
+                                    14km long and suitable for beginners.</p>
+                                <ul>
+                                    <li>Shuttle departs Akdeniz University: 09:00</li>
+                                    <li><em>Fee: To be announced.</em></li>
+                                </ul>
+                            </div>
+                            <img src="koprulu.jpg" alt="Rafting" class="img-responsive" style="height: 200px;">
+                        </div>
+                    </div>
+                    <div
+                        style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 5px solid #2196f3; margin-bottom: 30px;">
+                        <h3 style="margin-top:0; color: #0d47a1;">Main Event: Rafting in Köprülü Canyon</h3>
+                        <div class="grid-2">
+                            <div>
+                                <p><strong>Date:</strong> October 11, 2026</p>
+                                <p>Join us for an adrenaline-filled day at Köprülü Canyon National Park. The rafting
+                                    course is
+                                    14km long and suitable for beginners.</p>
+                                <ul>
+                                    <li>Shuttle departs Akdeniz University: 09:00</li>
+                                    <li><em>Fee: To be announced.</em></li>
+                                </ul>
+                            </div>
+                            <img src="koprulu.jpg" alt="Rafting" class="img-responsive" style="height: 200px;">
+                        </div>
+                    </div>
+
+                    <h3>Alternative Recreation Suggestions</h3>
+                    <p>For participants who prefer to explore independently on October 11, here are our top
+                        recommendations:</p>
+                    <h3>Alternative Recreation Suggestions</h3>
+                    <p>For participants who prefer to explore independently on October 11, here are our top
+                        recommendations:</p>
+
+                    <div class="grid-3">
+                        <div class="card">
+                            <img src="marina.png" alt="Kaleiçi" class="img-responsive">
+                            <h4>History & City Life</h4>
+                            <p><strong>Kaleiçi (Old Town):</strong> Explore the narrow streets, Hadrian's Gate, and the
+                                historic
+                                marina with boutique cafes.</p>
+                        </div>
+                        <div class="grid-3">
+                            <div class="card">
+                                <img src="marina.png" alt="Kaleiçi" class="img-responsive">
+                                <h4>History & City Life</h4>
+                                <p><strong>Kaleiçi (Old Town):</strong> Explore the narrow streets, Hadrian's Gate, and
+                                    the historic
+                                    marina with boutique cafes.</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="phaselis.png" alt="Beach" class="img-responsive">
+                                <h4>Sea & Sun</h4>
+                                <p><strong>Konyaaltı Beach:</strong> Just minutes from the university.<br>
+                                    <strong>Phaselis:</strong> Ancient ruins nestled right on the shore of pristine
+                                    bays.
+                                </p>
+                            </div>
+                            <div class="card">
+                                <img src="phaselis.png" alt="Beach" class="img-responsive">
+                                <h4>Sea & Sun</h4>
+                                <p><strong>Konyaaltı Beach:</strong> Just minutes from the university.<br>
+                                    <strong>Phaselis:</strong> Ancient ruins nestled right on the shore of pristine
+                                    bays.
+                                </p>
+                            </div>
+
+                            <div class="card">
+                                <img src="aspendos.png" alt="Ancient Ruins" class="img-responsive">
+                                <h4>Ancient Cities</h4>
+                                <p><strong>Perge & Aspendos:</strong> Visit the best-preserved Roman theater in the
+                                    world and the
+                                    ancient capital of Pamphylia.</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="olympos.png" alt="Nature" class="img-responsive">
+                                <h4>Nature</h4>
+                                <p><strong>Olympos/Chimaera:</strong> Famous for its treehouses, ancient ruins, and the
+                                    eternal
+                                    flames (Yanartaş).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="aspendos.png" alt="Ancient Ruins" class="img-responsive">
+                        <h4>Ancient Cities</h4>
+                        <p><strong>Perge & Aspendos:</strong> Visit the best-preserved Roman theater in the world and
+                            the
+                            ancient capital of Pamphylia.</p>
                     </div>
 
                     <div class="card">
-                        <h3>Program Co-Chairs</h3>
-                        <p><strong><a href="https://ece.ncsu.edu/people/aaysu/" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Aydın Aysu</a></strong><br>
-                            Electrical and Computer Engineering, North Carolina State University, USA<br>
-                            <a href="mailto:aaysu@ncsu.edu" class="profile-link"
-                                style="color: var(--primary-blue); font-weight: normal;">aaysu@ncsu.edu</a>
-                        </p>
-
-                        <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
-
-                        <p><strong><a href="https://www.barkhauseninstitut.org/en/people/elif-bilge-kavun"
-                                    target="_blank" style="color: inherit; text-decoration: none;">Elif Bilge
-                                    Kavun</a></strong><br>
-                            Faculty of Computer Science, Dresden University of Technology, Dresden, Germany<br>
-                            <a href="mailto:elif.kavun@barkhauseninstitut.org" class="profile-link"
-                                style="color: var(--primary-blue); font-weight: normal;">elif.kavun@barkhauseninstitut.org</a>
-                        </p>
+                        <img src="olympos.png" alt="Nature" class="img-responsive">
+                        <h4>Nature</h4>
+                        <p><strong>Olympos/Chimaera:</strong> Famous for its treehouses, ancient ruins, and the eternal
+                            flames (Yanartaş).</p>
                     </div>
                 </div>
-
-                <div class="card">
-                    <h3>Organizing Committee</h3>
-                    <ul class="committee-list">
-                        <li>
-                            <strong><a href="https://avesis.akdeniz.edu.tr/muratak" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Murat Ak</a></strong>, Akdeniz
-                            University, Antalya
-                        </li>
-                        <li>
-                            <strong><a href="https://ut.ee/en/employee/sedat-akleylek" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Sedat Akleylek</a></strong>,
-                            University of Tartu, Estonia
-                        </li>
-                        <li>
-                            <strong><a href="https://avesis.akdeniz.edu.tr/alkan" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Mustafa Alkan</a></strong>, Akdeniz
-                            University, Antalya
-                        </li>
-                        <li>
-                            <strong><a href="https://avesis.metu.edu.tr/melisa" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Melis Aslan</a></strong>, FAME CRYPT
-                        </li>
-                        <li>
-                            <strong><a href="https://antalya.edu.tr/tr/akademik-kadro/muhendislik-fakultesi/asli-bay"
-                                    target="_blank" style="color: inherit; text-decoration: none;">Aslı
-                                    Bay</a></strong>, Antalya Bilim University, Antalya
-                        </li>
-                        <li>
-                            <strong><a href="https://cse.iyte.edu.tr/doc-dr-orhun-kara/" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Orhun Kara</a></strong>, İzmir
-                            Institute of Technology, İzmir
-                        </li>
-                        <li>
-                            <strong><a href="https://scholar.google.com/citations?user=_5P5suEAAAAJ" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Neşe Koçak</a></strong>, ASELSAN
-                        </li>
-                        <li>
-                            <strong><a href="https://sites.google.com/view/kamilotal/home" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Kamil Otal</a></strong>,
-                            TÜBİTAK-BİLGEM
-                        </li>
-                        <li>
-                            <strong><a href="https://avesis.akdeniz.edu.tr/mozdemir" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Mustafa Özdemir</a></strong>, Akdeniz
-                            University, Antalya
-                        </li>
-                        <li>
-                            <strong><a href="https://people.sabanciuniv.edu/erkays/" target="_blank"
-                                    style="color: inherit; text-decoration: none;">Erkay Savaş</a></strong>, Sabanci
-                            University, İstanbul
-                        </li>
-                    </ul>
-                </div>
             </div>
 
-            <div class="card" style="margin-top: 10px;">
-                <h3>Program Committee</h3>
-                <ul class="committee-list" style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
-                    <li><strong>Sedat Akleylek</strong>, University of Tartu</li>
-                    <li><strong>Erdem Alkım</strong>, Ondokuz Mayıs University</li>
-                    <li><strong>Aydın Aysu</strong>, North Carolina State University</li>
-                    <li><strong>Reza Azarderakhsh</strong>, Florida Atlantic University</li>
-                    <li><strong>Lejla Batina</strong>, Radboud University</li>
-                    <li><strong>Christof Beierle</strong>, Ruhr University Bochum</li>
-                    <li><strong>Shivam Bhasin</strong>, Nanyang Technological University</li>
-                    <li><strong>Begül Bilgin</strong>, Rambus</li>
-                    <li><strong>Rosario Cammarota</strong>, Intel Labs</li>
-                    <li><strong>Yarkın Doröz</strong>, NVIDIA</li>
-                    <li><strong>Krzysztof M. Gaj</strong>, George Mason University</li>
-                    <li><strong>Shibam Ghosh</strong>, University of Haifa</li>
-                    <li><strong>Lorenzo Grassi</strong>, Eindhoven University of Technology</li>
-                    <li><strong>Tim Güneysu</strong>, Ruhr University Bochum</li>
-                    <li><strong>Emad Heydari Beni</strong>, COSIC, KU Leuven & Nokia Bell Labs</li>
-                    <li><strong>Orhun Kara</strong>, İzmir Institute of Technology</li>
-                    <li><strong>Koray Karabina</strong>, University of Waterloo</li>
-                    <li><strong>Elif Bilge Kavun</strong>, Dresden University of Technology</li>
-                    <li><strong>Ayesha Khalid</strong>, Queen’s University Belfast</li>
-                    <li><strong>Gregor Leander</strong>, Ruhr University Bochum</li>
-                    <li><strong>Amir Moradi</strong>, Darmstadt Technical University</li>
-                    <li><strong>Mehran Mozaffari Kermani</strong>, University of South Florida</li>
-                    <li><strong>Debdeep Mukhopadhyay</strong>, Indian Institute of Technology Kharagpur</li>
-                    <li><strong>Köksal Mus</strong>, Worcester Polytechnic Institute</li>
-                    <li><strong>Elisabeth Oswald</strong>, University of Birmingham</li>
-                    <li><strong>Kamil Otal</strong>, TÜBİTAK BİLGEM</li>
-                    <li><strong>Melek Önen</strong>, EURECOM</li>
-                    <li><strong>Svetla Petkova-Nikova</strong>, KU Leuven</li>
-                    <li><strong>Rachel Player</strong>, Royal Holloway, University of London</li>
-                    <li><strong>Shahram Rasoolzadeh</strong>, Ruhr University Bochum</li>
-                    <li><strong>Francisco Rodríguez-Henríquez</strong>, Technology Innovation Institute – Cryptography
-                        Research Centre</li>
-                    <li><strong>Kurt Rohloff</strong>, Duality Technologies</li>
-                    <li><strong>Erkay Savaş</strong>, Sabancı University</li>
-                    <li><strong>Özgür Sinanoğlu</strong>, New York University Abu Dhabi</li>
-                    <li><strong>Sujoy Sinha Roy</strong>, Graz University of Technology</li>
-                    <li><strong>Meltem Sönmez Turan</strong>, NIST</li>
-                    <li><strong>Cihangir Tezcan</strong>, Middle East Technical University</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="venue" class="tab-content">
-            <h2>Venue & Travel</h2>
-
-            <p>The conference will be held at <strong>Akdeniz University</strong>, located in the Konyaaltı district of
-                Antalya.</p>
-
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1353.8975366123836!2d30.66120669131983!3d36.891864962961634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c391cda532111d%3A0xf6604662f3787130!2sAkdeniz%20%C3%9Cniversitesi%20Sosyal%20Tesisler!5e1!3m2!1sen!2sus!4v1770926942850!5m2!1sen!2sus"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <h3>How to Get There</h3>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h4>From Antalya Airport (AYT)</h4>
-                    <p><strong>By Taxi:</strong> Taxis are available 24/7 at the arrival terminals. The ride to the
-                        university takes about 25-30 minutes.</p>
-                    <p><strong>By Tram (Antray):</strong> You can take the tram from the Airport station directly to the
-                        city center and transfer to the bus lines or take the tram towards Fatih and get off at the
-                        nearest stop to the campus.</p>
-                    <p><strong>By Bus:</strong> Municipal bus number 600 or 800 connects the airport to the city
-                        center/bus terminal.</p>
-                </div>
-
-                <div class="card">
-                    <h4>Arriving by Car</h4>
-                    <p>Akdeniz University is located near the D400 highway.</p>
-
-                    <p><strong>From West (Kemer/Muğla):</strong><br>
-                        Follow D400 towards Antalya Center. The university will be on your right as you enter the
-                        city.<br>
-                        <a href="https://maps.app.goo.gl/pkC7kTVwN9GQdnvW9" class="direction-link" target="_blank">Get
-                            Directions →</a>
-                    </p>
-
-                    <p><strong>From East (Airport(AYT)/Alanya/Side):</strong><br>
-                        Follow D400 through the city, following signs for Akdeniz Universitesi.<br>
-                        <a href="https://maps.app.goo.gl/H7ej78UbUcxWUz73A" class="direction-link" target="_blank">Get
-                            Directions →</a>
-                    </p>
-
-                    <p><strong>From North (Istanbul/Ankara/Izmir):</strong><br>
-                        Follow D650 and Antalya Bulvari towards Antalya City Center and then Dumlupinar Bulvari towards
-                        Akdeniz University.<br>
-                        <a href="https://maps.app.goo.gl/EYqxU2pFeAN1Wz877" class="direction-link" target="_blank">Get
-                            Directions →</a>
-                    </p>
-
-                    <p style="margin-top: 15px; font-style: italic; color: #666;">Parking is available on campus (Guest
-                        verification may be required at the gate).</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="accommodation" class="tab-content">
-            <h2>Accommodation</h2>
-            <p>We recommend the following accommodation option located directly on the university campus for your
-                convenience.</p>
-
-            <div class="card">
-                <h3>Akdeniz University Social Facilities (Sosyal Tesisleri)</h3>
-                <p><strong>Location:</strong> Within the Akdeniz University Campus (Walking distance to the venue).</p>
-                <p>The Social Facilities offer comfortable rooms in a peaceful environment right next to the conference
-                    venue. It is the most convenient option for attendees.</p>
-
-                <p><strong>Booking:</strong><br>
-                    Please contact the facility directly to make a reservation, mentioning "LightSec 2026".</p>
-
-                <p>
-                    <strong>Phone:</strong> +90 242 227 44 00 (Placeholder)<br>
-                    <strong>Email:</strong> sosyaltesisler@akdeniz.edu.tr (Placeholder)
-                </p>
-
-                <a href="#" class="direction-link" style="color: var(--primary-blue);">Visit Website (Coming Soon)</a>
-            </div>
-        </div>
-
-        <div id="social" class="tab-content">
-            <h2>Social Program</h2>
-            <p>Antalya offers a unique blend of history, nature, and sea. We have organized a main event, but also
-                provide suggestions for those wishing to explore on their own.</p>
-
-            <div
-                style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 5px solid #2196f3; margin-bottom: 30px;">
-                <h3 style="margin-top:0; color: #0d47a1;">Main Event: Rafting in Köprülü Canyon</h3>
-                <div class="grid-2">
-                    <div>
-                        <p><strong>Date:</strong> October 11, 2026</p>
-                        <p>Join us for an adrenaline-filled day at Köprülü Canyon National Park. The rafting course is
-                            14km long and suitable for beginners.</p>
-                        <ul>
-                            <li>Shuttle departs Akdeniz University: 09:00</li>
-                            <li><em>Fee: To be announced.</em></li>
-                        </ul>
-                    </div>
-                    <img src="koprulu.jpg" alt="Rafting" class="img-responsive" style="height: 200px;">
-                </div>
-            </div>
-
-            <h3>Alternative Recreation Suggestions</h3>
-            <p>For participants who prefer to explore independently on October 11, here are our top recommendations:</p>
-
-            <div class="grid-3">
-                <div class="card">
-                    <img src="marina.png" alt="Kaleiçi" class="img-responsive">
-                    <h4>History & City Life</h4>
-                    <p><strong>Kaleiçi (Old Town):</strong> Explore the narrow streets, Hadrian's Gate, and the historic
-                        marina with boutique cafes.</p>
-                </div>
-
-                <div class="card">
-                    <img src="phaselis.png" alt="Beach" class="img-responsive">
-                    <h4>Sea & Sun</h4>
-                    <p><strong>Konyaaltı Beach:</strong> Just minutes from the university.<br>
-                        <strong>Phaselis:</strong> Ancient ruins nestled right on the shore of pristine bays.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="aspendos.png" alt="Ancient Ruins" class="img-responsive">
-                    <h4>Ancient Cities</h4>
-                    <p><strong>Perge & Aspendos:</strong> Visit the best-preserved Roman theater in the world and the
-                        ancient capital of Pamphylia.</p>
-                </div>
-
-                <div class="card">
-                    <img src="olympos.png" alt="Nature" class="img-responsive">
-                    <h4>Nature</h4>
-                    <p><strong>Olympos/Chimaera:</strong> Famous for its treehouses, ancient ruins, and the eternal
-                        flames (Yanartaş).</p>
-                </div>
-            </div>
-        </div>
-
+        </main>
     </main>
 
+    <footer>
+        <p>© 2026 LightSec Workshop. Hosted by Akdeniz University, Department of Computer Engineering.</p>
+    </footer>
     <footer>
         <p>© 2026 LightSec Workshop. Hosted by Akdeniz University, Department of Computer Engineering.</p>
     </footer>
@@ -990,7 +1759,54 @@
         // Run once on load to set initial state
         updateBanner();
     </script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Shrinking banner on scroll
+        // Shrinking banner on scroll
+        const banner = document.querySelector('.banner');
+        const glassPanel = document.querySelector('.glass-panel');
+
+        function getBannerFullHeight() {
+            return window.innerWidth < 768 ? 300 : 400;
+        }
+
+        const BANNER_MIN = 80;
+
+        function updateBanner() {
+            const scrollY = window.scrollY;
+            const fullHeight = getBannerFullHeight();
+            const newHeight = Math.max(BANNER_MIN, fullHeight - scrollY);
+
+            // Calculate progress based on the current available range
+            const range = fullHeight - BANNER_MIN;
+            const progress = Math.min(1, Math.max(0, (fullHeight - newHeight) / range));
+
+            banner.style.height = newHeight + 'px';
+            glassPanel.style.opacity = 1 - progress;
+            glassPanel.style.transform = 'scale(' + (1 - progress * 0.08) + ')';
+        }
+
+        window.addEventListener('scroll', updateBanner);
+        window.addEventListener('resize', updateBanner);
+
+        // Run once on load to set initial state
+        updateBanner();
+    </script>
 
 </body>
+
 
 </html>
