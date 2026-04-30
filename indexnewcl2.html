@@ -175,12 +175,7 @@
             margin-bottom: .8rem;
         }
 
-        /* ── Site header ────────────────────────────────────────────── */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+
 
         /* ── Banner ─────────────────────────────────────────────────── */
         .banner {
@@ -277,6 +272,9 @@
 
         /* ── Navigation ─────────────────────────────────────────────── */
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             background-color: rgba(250, 246, 238, .92);
             backdrop-filter: saturate(140%) blur(12px);
             -webkit-backdrop-filter: saturate(140%) blur(12px);
@@ -1766,6 +1764,7 @@
     </footer>
 
     <script>
+        // Tab switching logic remains the same
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
@@ -1779,38 +1778,34 @@
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
 
-            // Scroll to top of main content for better UX
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Shrinking banner on scroll
+        // --- NEW SMOOTH PARALLAX LOGIC ---
         const banner = document.querySelector('.banner');
         const bannerContent = document.querySelector('.banner-content');
 
-        function getBannerFullHeight() {
-            if (window.innerWidth < 480) return 300;
-            if (window.innerWidth < 768) return 340;
-            return 440;
-        }
-
-        const BANNER_MIN = 90;
-
-        function updateBanner() {
+        function updateParallax() {
+            // Only run parallax if we are actually near the top of the page to save resources
             const scrollY = window.scrollY;
-            const fullHeight = getBannerFullHeight();
-            const newHeight = Math.max(BANNER_MIN, fullHeight - scrollY);
+            if (scrollY > 600) return;
 
-            const range = fullHeight - BANNER_MIN;
-            const progress = Math.min(1, Math.max(0, (fullHeight - newHeight) / range));
+            // 1. Fade out the text smoothly
+            const opacity = Math.max(0, 1 - (scrollY / 300));
+            bannerContent.style.opacity = opacity;
 
-            banner.style.height = newHeight + 'px';
-            bannerContent.style.opacity = 1 - progress * 0.95;
-            bannerContent.style.transform = 'scale(' + (1 - progress * 0.06) + ')';
+            // 2. Move the text down at 40% of the scroll speed (hardware accelerated)
+            bannerContent.style.transform = `translateY(${scrollY * 0.4}px)`;
+
+            // 3. Move the background image at 50% of the scroll speed for true parallax
+            banner.style.backgroundPosition = `center ${scrollY * 0.5}px`;
         }
 
-        window.addEventListener('scroll', updateBanner, { passive: true });
-        window.addEventListener('resize', updateBanner);
-        updateBanner();
+        // Using { passive: true } is crucial for scroll performance
+        window.addEventListener('scroll', updateParallax, { passive: true });
+
+        // Initialize
+        updateParallax();
     </script>
 
 </body>
