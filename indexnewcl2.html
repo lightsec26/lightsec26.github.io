@@ -210,6 +210,13 @@
             position: relative;
             z-index: 1;
             will-change: opacity, transform;
+            background: rgba(15, 36, 66, 0.65);
+            padding: 3rem 4rem;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(250, 246, 238, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .banner-edition {
@@ -882,6 +889,10 @@
             .banner {
                 height: 340px;
                 padding: 1.2rem;
+            }
+
+            .banner-content {
+                padding: 2rem 1.5rem;
             }
 
             .banner-content h1 {
