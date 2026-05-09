@@ -324,6 +324,69 @@
             left: 20%;
         }
 
+        /* ── Dropdowns ──────────────────────────────────────────────── */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--paper);
+            min-width: 200px;
+            box-shadow: var(--shadow-md);
+            z-index: 1001;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--sand);
+            top: 100%;
+            left: 0;
+            flex-direction: column;
+            padding: 0.5rem 0;
+            margin-top: 0.2rem;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: flex;
+        }
+
+        .dropdown-item {
+            background: none;
+            border: none;
+            padding: 10px 18px;
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 0.92rem;
+            color: var(--ink-soft);
+            cursor: pointer;
+            transition: background-color .2s, color .2s;
+            width: 100%;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--sand-soft);
+            color: var(--ink);
+        }
+
+        .dropdown-item.active {
+            color: var(--ember);
+            font-weight: 600;
+            background-color: rgba(184, 66, 15, .05);
+        }
+
+        .caret {
+            font-size: 0.75rem;
+            margin-left: 4px;
+            vertical-align: middle;
+            color: var(--stone-soft);
+        }
+
+        .tab-button:hover .caret,
+        .tab-button.active .caret {
+            color: var(--ember);
+        }
+
         /* ── Main content ───────────────────────────────────────────── */
         main {
             max-width: 1180px;
@@ -904,28 +967,28 @@
                 padding: 1.6rem 1.4rem;
             }
 
-            /* Horizontal scrolling nav */
             .nav-container {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                justify-content: flex-start;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-            }
-
-            .nav-container::-webkit-scrollbar {
-                display: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.2rem;
+                padding: 0.5rem;
             }
 
             .tab-button {
                 flex: 0 0 auto;
-                padding: .9rem 1rem;
+                padding: .8rem .9rem;
                 font-size: .88rem;
             }
 
             .tab-button.active::after {
                 width: 70%;
                 left: 15%;
+            }
+
+            .dropdown-content {
+                min-width: 180px;
+                left: 50%;
+                transform: translateX(-50%);
             }
 
             th,
@@ -993,14 +1056,33 @@
         <nav>
             <div class="nav-container">
                 <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
-                <button class="tab-button" onclick="openTab(event, 'program')">Program & Submission</button>
-                <button class="tab-button" onclick="openTab(event, 'poster')">Poster Session</button>
-                <button class="tab-button" onclick="openTab(event, 'registration')">Registration</button>
-                <button class="tab-button" onclick="openTab(event, 'organization')">Organization</button>
-                <button class="tab-button" onclick="openTab(event, 'sponsorship')">Sponsorship</button>
-                <button class="tab-button" onclick="openTab(event, 'venue')">Venue & Travel</button>
-                <button class="tab-button" onclick="openTab(event, 'accommodation')">Accommodation</button>
-                <button class="tab-button" onclick="openTab(event, 'social')">Social Activities</button>
+
+                <div class="dropdown">
+                    <button class="tab-button dropdown-toggle">Program <span class="caret">▼</span></button>
+                    <div class="dropdown-content">
+                        <button class="dropdown-item" onclick="openTab(event, 'program')">Program & Submission</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'poster')">Poster Session</button>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="tab-button dropdown-toggle">Attend <span class="caret">▼</span></button>
+                    <div class="dropdown-content">
+                        <button class="dropdown-item" onclick="openTab(event, 'registration')">Registration</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'venue')">Venue & Travel</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'accommodation')">Accommodation</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'social')">Social Activities</button>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="tab-button dropdown-toggle">Organization <span class="caret">▼</span></button>
+                    <div class="dropdown-content">
+                        <button class="dropdown-item" onclick="openTab(event, 'organization')">Organizing Committee</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'sponsorship')">Sponsorship</button>
+                    </div>
+                </div>
+
                 <button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
             </div>
         </nav>
@@ -1739,9 +1821,8 @@
     </footer>
 
     <script>
-        // Tab switching logic remains the same
         function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
+            var i, tabcontent, tablinks, dropdownItems;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].classList.remove("active");
@@ -1750,8 +1831,24 @@
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
+            dropdownItems = document.getElementsByClassName("dropdown-item");
+            for (i = 0; i < dropdownItems.length; i++) {
+                dropdownItems[i].classList.remove("active");
+            }
+
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
+            
+            // Highlight parent dropdown if a dropdown item was clicked
+            var parentDropdown = evt.currentTarget.closest('.dropdown');
+            if (parentDropdown) {
+                parentDropdown.querySelector('.tab-button').classList.add("active");
+            }
+
+            // Remove focus to close dropdown on mobile
+            if (document.activeElement) {
+                document.activeElement.blur();
+            }
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
