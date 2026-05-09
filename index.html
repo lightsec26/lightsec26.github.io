@@ -1066,7 +1066,7 @@
                 </div>
 
                 <div class="dropdown">
-                    <button class="tab-button dropdown-toggle">Attend <span class="caret">▼</span></button>
+                    <button class="tab-button dropdown-toggle">Info <span class="caret">▼</span></button>
                     <div class="dropdown-content">
                         <button class="dropdown-item" onclick="openTab(event, 'registration')">Registration</button>
                         <button class="dropdown-item" onclick="openTab(event, 'venue')">Venue & Travel</button>
@@ -1078,7 +1078,8 @@
                 <div class="dropdown">
                     <button class="tab-button dropdown-toggle">Organization <span class="caret">▼</span></button>
                     <div class="dropdown-content">
-                        <button class="dropdown-item" onclick="openTab(event, 'organization')">Organizing Committee</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'organization')">Organizing
+                            Committee</button>
                         <button class="dropdown-item" onclick="openTab(event, 'sponsorship')">Sponsorship</button>
                     </div>
                 </div>
@@ -1838,7 +1839,7 @@
 
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
-            
+
             // Highlight parent dropdown if a dropdown item was clicked
             var parentDropdown = evt.currentTarget.closest('.dropdown');
             if (parentDropdown) {
