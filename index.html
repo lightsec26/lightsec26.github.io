@@ -346,6 +346,17 @@
             margin-top: 0.2rem;
         }
 
+        /* Transparent bridge to prevent losing hover in the 0.2rem gap */
+        .dropdown-content::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 0;
+            right: 0;
+            height: 12px;
+            background: transparent;
+        }
+
         .dropdown:hover .dropdown-content,
         .dropdown:focus-within .dropdown-content {
             display: flex;
