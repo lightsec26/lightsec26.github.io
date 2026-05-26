@@ -1109,8 +1109,23 @@
 
         <!-- ════════════════════ HOME ════════════════════ -->
         <div id="home" class="tab-content active">
-            <span class="eyebrow">About the Workshop</span>
-            <h1>7<sup>th</sup> International Workshop on Lightweight Cryptography for Security &amp; Privacy</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.2rem; border-bottom: 1px solid var(--sand); padding-bottom: 1.2rem; position: relative;">
+                <div style="flex: 1; min-width: 280px;">
+                    <span class="eyebrow">About the Workshop</span>
+                    <h1 style="margin: 0; border: none; padding: 0;">7<sup>th</sup> International Workshop on Lightweight Cryptography for Security &amp; Privacy</h1>
+                </div>
+                <div style="display: flex; gap: 2rem; align-items: center; justify-content: flex-end;">
+                    <a href="https://www.iacr.org/" target="_blank" style="display: inline-block; transition: opacity 0.25s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                        <img src="logos/iacrlogo_trans.png" alt="IACR Logo" style="height: 85px; object-fit: contain;">
+                    </a>
+                    <a href="https://www.akdeniz.edu.tr/" target="_blank" style="display: inline-block; transition: opacity 0.25s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                        <img src="logos/akdeniz.png" alt="Akdeniz University Logo" style="height: 85px; object-fit: contain;">
+                    </a>
+                </div>
+                <!-- Orange accent line matching the default style sheet -->
+                <div style="position: absolute; bottom: -1px; left: 0; width: 64px; height: 2px; background: var(--ember);"></div>
+            </div>
+
             <p>LightSec 2026 promotes and initiates novel research on security, privacy, and trust issues related to
                 applications that fall under the umbrella of lightweight security. <strong>LightSec 2026 is officially
                     an affiliated event of the renowned <a href="https://ches.iacr.org/2026/" target="_blank"
@@ -1128,18 +1143,6 @@
                 implementations for applications utilizing advanced cryptographic algorithms such as homomorphic
                 encryption, zero-knowledge proofs, secure multi-party computation, cryptographic consensus protocols in
                 blockchain applications, threshold cryptography, and post-quantum cryptography.</p>
-
-            <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center; margin: 2.5rem 0; padding: 1.8rem; border-top: 1px solid var(--sand); border-bottom: 1px solid var(--sand);">
-                <a href="https://www.iacr.org/" target="_blank" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--stone); font-size: 0.85rem; font-family: var(--font-mono); text-align: center; flex: 1 1 200px; max-width: 280px; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                    <img src="logos/iacrlogo_trans.png" alt="IACR Logo" style="height: 55px; object-fit: contain; margin-bottom: 0.6rem; filter: saturate(0.9);">
-                    <span style="letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;">IACR Affiliated Event</span>
-                </a>
-                <div style="width: 1px; height: 50px; background-color: var(--sand);"></div>
-                <a href="https://www.akdeniz.edu.tr/" target="_blank" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--stone); font-size: 0.85rem; font-family: var(--font-mono); text-align: center; flex: 1 1 200px; max-width: 280px; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                    <img src="logos/akdeniz.png" alt="Akdeniz University Logo" style="height: 55px; object-fit: contain; margin-bottom: 0.6rem; filter: saturate(0.9);">
-                    <span style="letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;">Hosted by Akdeniz University</span>
-                </a>
-            </div>
 
             <div class="grid-2">
                 <div>
