@@ -1037,6 +1037,96 @@
             outline: 2px solid var(--ember);
             outline-offset: 2px;
         }
+
+        /* ── Registration Form ──────────────────────────────────────── */
+        .reg-form-card {
+            background: var(--paper-2);
+            border: 1px solid var(--sand);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .reg-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .reg-form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .reg-form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .reg-form-group label {
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 0.95rem;
+        }
+
+        .reg-form-group input[type="text"],
+        .reg-form-group input[type="email"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--sand);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+            background: var(--white);
+            color: var(--ink);
+            transition: border-color .25s, box-shadow .25s;
+        }
+
+        .reg-form-group input[type="text"]:focus,
+        .reg-form-group input[type="email"]:focus {
+            outline: none;
+            border-color: var(--ember);
+            box-shadow: 0 0 0 3px rgba(184, 66, 15, .12);
+        }
+
+        .radio-group-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            padding: 0.5rem 0;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--ink-soft);
+        }
+
+        .radio-option input[type="radio"] {
+            accent-color: var(--ember);
+            width: 1.1rem;
+            height: 1.1rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .reg-form-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .reg-form-group.full-width {
+                grid-column: span 1;
+            }
+            .reg-form-card {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -1720,10 +1810,65 @@
         <!-- ════════════════════ REGISTRATION ════════════════════ -->
         <div id="registration" class="tab-content">
             <span class="eyebrow">Sign Up</span>
-            <h2>Registration</h2>
-            <p>LightSec 2026 is officially an affiliated event of <a href="https://ches.iacr.org/2026/" target="_blank"
-                    style="color: var(--ember); text-decoration: underline; font-weight: 600;">CHES 2026</a>.
-                Registration fees, procedures, and cancellation policies are managed through the CHES website.</p>
+            <h2>LightSec 2026 - Registration</h2>
+            
+            <p>This is the unofficial registration form for LightSec 2026 in Antalya, Türkiye on October 11, 2026.</p>
+            <p>Similarly to last year, LightSec 2026 is affiliated with <a href="https://ches.iacr.org/2026/" target="_blank"
+                    style="color: var(--ember); text-decoration: underline; font-weight: 600;">CHES 2026</a>, which is handling the official registration and payment. This form exists only so the organizers of LightSec can send you last-minute updates and pointers to slides (and possibly videos) once they become available. If you are planning to attend LightSec 2026, please fill out the following information.</p>
+
+            <!-- Registration Form Card -->
+            <form class="reg-form-card" action="https://formspree.io/f/xdabenpb" method="POST">
+                <input type="hidden" name="_subject" value="LightSec 2026 Unofficial Registration Submission">
+                
+                <div class="reg-form-grid">
+                    <div class="reg-form-group">
+                        <label for="reg-first-name">First name:</label>
+                        <input type="text" id="reg-first-name" name="first_name" required>
+                    </div>
+                    <div class="reg-form-group">
+                        <label for="reg-last-name">Last name:</label>
+                        <input type="text" id="reg-last-name" name="last_name" required>
+                    </div>
+                    
+                    <div class="reg-form-group full-width">
+                        <label>Registration type:</label>
+                        <div class="radio-group-container">
+                            <label class="radio-option">
+                                <input type="radio" name="registration_type" value="Regular" checked>
+                                <span>Regular</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="registration_type" value="Presenter">
+                                <span>Presenter</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="registration_type" value="Student">
+                                <span>Student</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="reg-form-group full-width">
+                        <label for="reg-affiliation">Affiliation:</label>
+                        <input type="text" id="reg-affiliation" name="affiliation" required>
+                    </div>
+                    
+                    <div class="reg-form-group">
+                        <label for="reg-country">Country:</label>
+                        <input type="text" id="reg-country" name="country" required>
+                    </div>
+                    <div class="reg-form-group">
+                        <label for="reg-email">Email address:</label>
+                        <input type="email" id="reg-email" name="email" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn" style="margin: 0;">
+                    <span>Register</span>
+                </button>
+            </form>
+
+            <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--sand);">
 
             <div class="reg-placeholder-grid">
                 <div class="reg-placeholder-card">
