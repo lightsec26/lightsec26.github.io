@@ -1166,6 +1166,16 @@
                 <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
 
                 <div class="dropdown">
+                    <button class="tab-button dropdown-toggle">Program <span class="caret">▼</span></button>
+                    <div class="dropdown-content">
+                        <button class="dropdown-item" onclick="openTab(event, 'workshop-program')">Workshop
+                            Program</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'accepted-papers')">Accepted
+                            Papers</button>
+                    </div>
+                </div>
+
+                <div class="dropdown">
                     <button class="tab-button dropdown-toggle">Submission <span class="caret">▼</span></button>
                     <div class="dropdown-content">
                         <button class="dropdown-item" onclick="openTab(event, 'program')">Paper Submission</button>
@@ -1201,12 +1211,21 @@
 
         <!-- ════════════════════ HOME ════════════════════ -->
         <div id="home" class="tab-content active">
-            <!-- Deadline Alert Banner -->
+            <!-- Program Alert Banner -->
             <div
-                style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.03)); border: 1px solid rgba(239, 68, 68, 0.3); border-left: 4px solid #ef4444; border-radius: var(--radius-sm); padding: 0.9rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; color: #dc2626; font-weight: 600; font-size: 0.95rem; box-shadow: var(--shadow-sm);">
-                <span style="font-size: 1.2rem; line-height: 1;">📢</span>
-                <span>Paper submission deadline is updated to <strong><span style="font-size: 1.1em;">July 17,
-                            2026</span></strong></span>
+                style="background: rgba(31, 88, 114, 0.05); border: 1px solid rgba(31, 88, 114, 0.2); border-left: 4px solid var(--sea); border-radius: var(--radius-sm); padding: 0.9rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: var(--shadow-sm); flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.2rem; line-height: 1;">📅</span>
+                    <span style="color: var(--ink); font-weight: 500; font-size: 0.95rem;">The <strong>Workshop
+                            Program</strong> and <strong>Accepted Papers</strong> are now available.</span>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <button class="btn"
+                        style="margin: 0; padding: 8px 16px; font-size: 0.85rem; background-color: var(--sea); border-color: var(--sea);"
+                        onclick="openTab({currentTarget: document.querySelector('.tab-button:nth-child(2)')}, 'workshop-program')">
+                        <span>View Program →</span>
+                    </button>
+                </div>
             </div>
 
             <div
@@ -1313,6 +1332,340 @@
                     <span>Go to Contact Page →</span>
                 </button>
             </div>
+        </div>
+
+        <!-- ════════════════════ WORKSHOP PROGRAM ════════════════════ -->
+        <div id="workshop-program" class="tab-content">
+            <span class="eyebrow">LightSec 2026</span>
+            <h2>Workshop Program</h2>
+
+            <div
+                style="overflow-x: auto; margin-top: 1.5rem; background: var(--white); border: 1px solid var(--sand); border-radius: var(--radius-sm);">
+                <table style="width: 100%; border-collapse: collapse; margin: 0; font-size: 0.95rem;">
+                    <thead>
+                        <tr>
+                            <th
+                                style="width: 25%; padding: 14px 20px; border-bottom: 2px solid var(--sand); background-color: var(--paper); color: var(--stone);">
+                                Time</th>
+                            <th
+                                style="width: 75%; padding: 14px 20px; border-bottom: 2px solid var(--sand); background-color: var(--paper); color: var(--stone);">
+                                Event</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                09:00 - 09:10</td>
+                            <td style="padding: 16px 20px;"><strong style="color: var(--ink);">Opening</strong></td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                09:10 - 10:00</td>
+                            <td style="padding: 16px 20px;">
+                                <strong style="color: var(--ink);">Keynote</strong>
+                                <div style="color: var(--ember); font-size: 0.95rem; margin-top: 0.2rem;">Mike Hutter
+                                    (UniBW, PQShield)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                10:00 - 10:30</td>
+                            <td style="padding: 16px 20px;">
+                                <strong style="color: var(--ink);">Session 1 — Symmetric Cryptography and White-Box
+                                    Security</strong>
+                                <ul
+                                    style="margin: 0.6rem 0 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink-soft);">
+                                    <li style="margin-bottom: 0.4rem;"><strong>LEANY: A Hardware-Friendly Wide-Block
+                                            Block Cipher</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Gökçe Düzyol, Nida Fidan,
+                                            Kamil Otal and Selman Pınar</span></li>
+                                    <li><strong>White-Box Block Cipher Implementation Based on
+                                            LS-Design</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Hatice Güner, Ceyda Mangır
+                                            and Oğuz Yayla</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="background-color: var(--paper-2);">
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                10:30 - 11:00</td>
+                            <td style="padding: 16px 20px; color: var(--stone); font-weight: 600;">☕ Coffee Break /
+                                Poster Session</td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                11:00 - 11:30</td>
+                            <td style="padding: 16px 20px;">
+                                <strong style="color: var(--ink);">Session 2 — Cryptography for Decentralized
+                                    Systems</strong>
+                                <ul
+                                    style="margin: 0.6rem 0 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink-soft);">
+                                    <li style="margin-bottom: 0.4rem;"><strong>Towards Trustless Provenance: A
+                                            Privacy-Preserving Framework for On-chain Media
+                                            Verification</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Shahriar Ebrahimi, Parisa
+                                            Hassanizadeh and Piotr Mikołajczyk</span></li>
+                                    <li><strong>Unveiling the Cost: Gas-Efficient Output-Private Distributed VRFs on
+                                            Ethereum</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Ahmet Ramazan Ağırtaş and
+                                            Arda Buğra Özer</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                11:30 - 12:30</td>
+                            <td style="padding: 16px 20px;">
+                                <strong style="color: var(--ink);">Panel</strong>
+                                <div style="color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.3rem;">“The Future
+                                    of Lightweight Cryptography: Security, Efficiency, and Deployment”</div>
+                                <div style="color: var(--ember); font-size: 0.85rem; margin-top: 0.3rem;">Mike Hutter,
+                                    Patrick Schaumont, Erkay Savas</div>
+                            </td>
+                        </tr>
+                        <tr style="background-color: var(--paper-2);">
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                12:30 - 13:30</td>
+                            <td style="padding: 16px 20px; color: var(--stone); font-weight: 600;">🍽️ Lunch</td>
+                        </tr>
+                        <tr style="background-color: var(--paper-2); border-bottom: 1px solid var(--sand-soft);">
+                            <td colspan="2"
+                                style="padding: 12px 20px; text-align: center; font-weight: 600; color: var(--sea); font-size: 0.95rem; letter-spacing: 0.02em;">
+                                Session Block 3 — Secure Computation and Implementation</td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone); border-top: none;">
+                                13:30 - 14:30</td>
+                            <td style="padding: 16px 20px; border-top: none;">
+                                <strong style="color: var(--ink);">Session 3A — Private Computation and Secure
+                                    Inference</strong>
+                                <ul
+                                    style="margin: 0.6rem 0 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink-soft);">
+                                    <li style="margin-bottom: 0.4rem;"><strong>Privacy-Preserving Shape Matching with
+                                            Leveled Homomorphic Encryption</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Agha Aghayev and Yadigar
+                                            Imamverdiyev</span></li>
+                                    <li style="margin-bottom: 0.4rem;"><strong>An Agile Homomorphic Encryption and
+                                            ML-KEM Scheme for Privacy-Preserving Health Data
+                                            Processing</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Daniel Resende, Nadia El
+                                            Mrabet and Ulrich Kühne</span></li>
+                                    <li style="margin-bottom: 0.4rem;"><strong>A Unified Logic-Locking Framework for
+                                            Private Function Evaluation: TFHE- and Garbled-Circuit-Based
+                                            Instantiations</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Kohei Suemitsu, Kotaro
+                                            Matsuoka, Takashi Sato, Rei Ueno and Masanori Hashimoto</span></li>
+                                    <li><strong>UniversalShield: Lightweight Architecture-Hiding Secure Inference for
+                                            Edge-AI</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Gijung Lee and Domenic
+                                            Forte</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                14:30 - 15:00</td>
+                            <td style="padding: 16px 20px;">
+                                <strong style="color: var(--ink);">Session 3B — Secure and Trustworthy Cryptographic
+                                    Implementations</strong>
+                                <ul
+                                    style="margin: 0.6rem 0 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink-soft);">
+                                    <li style="margin-bottom: 0.4rem;"><strong>From PQC to HHE: Reusing a Co-Design
+                                            Platform for Side-Channel-Protected PASTA</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Ahmet Malal, Tolun Tosun,
+                                            Oğuz Yayla and Erkay Savaş</span></li>
+                                    <li><strong>Primitive-Specific Admission for Lightweight-Crypto Benchmarks: Three
+                                            Failure Modes</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Jamie Kelly</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="background-color: var(--paper-2);">
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                15:00 - 15:30</td>
+                            <td style="padding: 16px 20px; color: var(--stone); font-weight: 600;">☕ Coffee Break /
+                                Poster Session</td>
+                        </tr>
+                        <tr style="background-color: var(--paper-2); border-bottom: 1px solid var(--sand-soft);">
+                            <td colspan="2"
+                                style="padding: 12px 20px; text-align: center; font-weight: 600; color: var(--sea); font-size: 0.95rem; letter-spacing: 0.02em;">
+                                Session Block 4 — Post-Quantum Cryptography in Practice</td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone); border-top: none;">
+                                15:30 - 16:30</td>
+                            <td style="padding: 16px 20px; border-top: none;">
+                                <strong style="color: var(--ink);">Session 4A — Efficient Post-Quantum Cryptographic
+                                    Implementations</strong>
+                                <ul
+                                    style="margin: 0.6rem 0 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink-soft);">
+                                    <li style="margin-bottom: 0.4rem;"><strong>hqc-tiny: An Area-First Complete Hardware
+                                            KEM for HQC</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Ömer Üstün and Muhammed
+                                            Çelik</span></li>
+                                    <li style="margin-bottom: 0.4rem;"><strong>Accelerating Classic McEliece
+                                            Encapsulation and Decapsulation with RISC-V Vector Extensions and Custom
+                                            Instructions</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Mahnaz Namazi Rizi, Lejla
+                                            Batina and Nele Mentens</span></li>
+                                    <li style="margin-bottom: 0.4rem;"><strong>A Unified FPGA Accelerator of Stateful
+                                            and Stateless Hash-Based Key/Signature Generation for Post-Quantum
+                                            Cryptography</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Yechu Zhang, Yuxuan Chu,
+                                            Yaodong Wei, Yueqin Dai, Qiu Shen and Jing Tian</span></li>
+                                    <li><strong>SQIsign Verification on Constrained IoT: Energy Analysis across BLE and
+                                            LoRaWAN on Cortex-M4</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Xanthe Hands</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone);">
+                                16:30 - 17:00</td>
+                            <td style="padding: 16px 20px;">
+                                <strong style="color: var(--ink);">Session 4B — Side-Channel Security of Post-Quantum
+                                    Cryptography</strong>
+                                <ul
+                                    style="margin: 0.6rem 0 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink-soft);">
+                                    <li style="margin-bottom: 0.4rem;"><strong>Cross-information lattice attack on
+                                            ML-KEM</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Nascimo Madieta, Stephane
+                                            Potti, Nadia El Mrabet and Daniele Fronte</span></li>
+                                    <li><strong>ColliMate: Hierarchical Side-channel Leakage Assessment of ML-KEM Custom
+                                            Instruction Extensions</strong><br><span
+                                            style="font-size: 0.85rem; color: var(--stone);">Arna Roy, Dillibabu
+                                            Shanmugam and Patrick Schaumont</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 16px 20px; font-family: var(--font-mono); font-size: 0.9rem; color: var(--stone); border-bottom: none;">
+                                17:00 - 17:05</td>
+                            <td style="padding: 16px 20px; border-bottom: none;"><strong
+                                    style="color: var(--ink);">Final Remarks</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ════════════════════ ACCEPTED PAPERS ════════════════════ -->
+        <div id="accepted-papers" class="tab-content">
+            <span class="eyebrow">LightSec 2026</span>
+            <h2>Accepted Papers</h2>
+            <p>We are pleased to announce the following accepted papers for LightSec 2026:</p>
+
+            <ul style="list-style: none; padding-left: 0; margin-top: 2rem;">
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        Privacy-Preserving Shape Matching with Leveled Homomorphic Encryption</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Agha Aghayev and Yadigar Imamverdiyev</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        Cross-information lattice attack on ML-KEM</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Nascimo Madieta, Stephane Potti, Nadia El
+                        Mrabet and Daniele Fronte</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">An
+                        Agile Homomorphic Encryption and ML-KEM Scheme for Privacy-Preserving Health Data Processing
+                    </div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Daniel Resende, Nadia El Mrabet and Ulrich
+                        Kühne</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">Towards
+                        Trustless Provenance: A Privacy-Preserving Framework for On-chain Media Verification</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Shahriar Ebrahimi, Parisa Hassanizadeh and
+                        Piotr Mikołajczyk</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">A
+                        Unified Logic-Locking Framework for Private Function Evaluation: TFHE- and Garbled-Circuit-Based
+                        Instantiations</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Kohei Suemitsu, Kotaro Matsuoka, Takashi
+                        Sato, Rei Ueno and Masanori Hashimoto</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        Unveiling the Cost: Gas-Efficient Output-Private Distributed VRFs on Ethereum</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Ahmet Ramazan Ağırtaş and Arda Buğra Özer
+                    </div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        Primitive-Specific Admission for Lightweight-Crypto Benchmarks: Three Failure Modes</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Jamie Kelly</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        hqc-tiny: An Area-First Complete Hardware KEM for HQC</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Ömer Üstün and Muhammed Çelik</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">LEANY:
+                        A Hardware-Friendly Wide-Block Block Cipher</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Gökçe Düzyol, Nida Fidan, Kamil Otal and
+                        Selman Pınar</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">From
+                        PQC to HHE: Reusing a Co-Design Platform for Side-Channel-Protected PASTA</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Ahmet Malal, Tolun Tosun, Oğuz Yayla and
+                        Erkay Savaş</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        Accelerating Classic McEliece Encapsulation and Decapsulation with RISC-V Vector Extensions and
+                        Custom Instructions</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Mahnaz Namazi Rizi, Lejla Batina and Nele
+                        Mentens</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        ColliMate: Hierarchical Side-channel Leakage Assessment of ML-KEM Custom Instruction Extensions
+                    </div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Arna Roy, Dillibabu Shanmugam and Patrick
+                        Schaumont</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">A
+                        Unified FPGA Accelerator of Stateful and Stateless Hash-Based Key/Signature Generation for
+                        Post-Quantum Cryptography</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Yechu Zhang, Yuxuan Chu, Yaodong Wei,
+                        Yueqin Dai, Qiu Shen and Jing Tian</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        UniversalShield: Lightweight Architecture Hiding Secure Inference for Edge AI</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Gijung Lee and Domenic Forte</div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">
+                        White-Box Block Cipher Implementation Based on LS-Design</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Hatice Güner, Ceyda Mangır and Oğuz Yayla
+                    </div>
+                </li>
+                <li style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand-soft);">
+                    <div style="font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem;">SQIsign
+                        Verification on Constrained IoT: Energy Analysis across BLE and LoRaWAN on Cortex-M4</div>
+                    <div style="color: var(--ink-soft); font-size: 0.95rem;">Xanthe Hands</div>
+                </li>
+            </ul>
         </div>
 
         <!-- ════════════════════ PROGRAM ════════════════════ -->
@@ -1854,13 +2207,18 @@
             <span class="eyebrow">Sign Up</span>
             <h2>LightSec 2026 - Registration</h2>
 
-            <div style="background: rgba(184, 66, 15, 0.05); border: 1px solid rgba(184, 66, 15, 0.2); border-left: 4px solid var(--ember); border-radius: var(--radius-sm); padding: 1.2rem 1.5rem; margin-bottom: 2rem; color: var(--ink);">
-                <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; font-size: 1.05rem; color: var(--ember); margin-bottom: 0.5rem;">
+            <div
+                style="background: rgba(184, 66, 15, 0.05); border: 1px solid rgba(184, 66, 15, 0.2); border-left: 4px solid var(--ember); border-radius: var(--radius-sm); padding: 1.2rem 1.5rem; margin-bottom: 2rem; color: var(--ink);">
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; font-weight: 600; font-size: 1.05rem; color: var(--ember); margin-bottom: 0.5rem;">
                     <span style="font-size: 1.2rem; line-height: 1;">⚠️</span>
                     <span>Important: Unofficial Registration Also Required</span>
                 </div>
-                <p style="margin-bottom: 1rem; font-size: 0.95rem; color: var(--ink);">In addition to the official registration via CHES, all visitors and attendees must fill out our unofficial registration form. This allows us to send you last-minute updates and pointers to slides/videos.</p>
-                <a href="registration.html" class="btn" style="margin: 0;"><span>Go to Unofficial Registration Form &rarr;</span></a>
+                <p style="margin-bottom: 1rem; font-size: 0.95rem; color: var(--ink);">In addition to the official
+                    registration via CHES, all visitors and attendees must fill out our unofficial registration form.
+                    This allows us to send you last-minute updates and pointers to slides/videos.</p>
+                <a href="registration.html" class="btn" style="margin: 0;"><span>Go to Unofficial Registration Form
+                        &rarr;</span></a>
             </div>
 
             <div class="reg-placeholder-grid">
