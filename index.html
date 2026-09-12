@@ -1219,11 +1219,16 @@
                     <span style="color: var(--ink); font-weight: 500; font-size: 0.95rem;">The <strong>Workshop
                             Program</strong> and <strong>Accepted Papers</strong> are now available.</span>
                 </div>
-                <div style="display: flex; gap: 0.5rem;">
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                     <button class="btn"
                         style="margin: 0; padding: 8px 16px; font-size: 0.85rem; background-color: var(--sea); border-color: var(--sea);"
-                        onclick="openTab({currentTarget: document.querySelector('.tab-button:nth-child(2)')}, 'workshop-program')">
+                        onclick="openTab({currentTarget: document.querySelectorAll('.dropdown-item')[0]}, 'workshop-program')">
                         <span>View Program →</span>
+                    </button>
+                    <button class="btn"
+                        style="margin: 0; padding: 8px 16px; font-size: 0.85rem; background-color: var(--sea); border-color: var(--sea);"
+                        onclick="openTab({currentTarget: document.querySelectorAll('.dropdown-item')[1]}, 'accepted-papers')">
+                        <span>Accepted Papers →</span>
                     </button>
                 </div>
             </div>
