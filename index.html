@@ -1233,6 +1233,22 @@
                 </div>
             </div>
 
+            <!-- Poster Deadline Alert Banner -->
+            <div
+                style="background: rgba(184, 66, 15, 0.05); border: 1px solid rgba(184, 66, 15, 0.2); border-left: 4px solid var(--ember); border-radius: var(--radius-sm); padding: 0.9rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; box-shadow: var(--shadow-sm); flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.2rem; line-height: 1;">📢</span>
+                    <span style="color: var(--ink); font-weight: 500; font-size: 0.95rem;"><strong>Update:</strong> The poster submission deadline has been extended to <strong>September 22, 2026</strong>.</span>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <button class="btn btn-download"
+                        style="margin: 0; padding: 8px 16px; font-size: 0.85rem;"
+                        onclick="openTab({currentTarget: document.querySelectorAll('.dropdown-item')[3]}, 'poster')">
+                        <span>View Details →</span>
+                    </button>
+                </div>
+            </div>
+
             <div
                 style="display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.2rem; border-bottom: 1px solid var(--sand); padding-bottom: 1.2rem; position: relative;">
                 <div style="flex: 1; min-width: 280px;">
@@ -2141,7 +2157,7 @@
                         <td><span style="text-decoration: line-through; color: var(--stone-soft);">August 1,
                                 2026</span> <span
                                 style="color: red; font-weight: bold; font-size: 1.1em; margin-left: 8px;">September
-                                1, 2026</span></td>
+                                22, 2026</span></td>
                     </tr>
                     <tr>
                         <th>Author notification</th>
