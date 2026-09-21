@@ -1168,6 +1168,7 @@
                 <div class="dropdown">
                     <button class="tab-button dropdown-toggle">Program <span class="caret">▼</span></button>
                     <div class="dropdown-content">
+                        <button class="dropdown-item" onclick="openTab(event, 'keynote')">Keynote Speaker</button>
                         <button class="dropdown-item" onclick="openTab(event, 'workshop-program')">Workshop
                             Program</button>
                         <button class="dropdown-item" onclick="openTab(event, 'accepted-papers')">Accepted
@@ -1355,6 +1356,31 @@
             </div>
         </div>
 
+        <!-- ════════════════════ KEYNOTE ════════════════════ -->
+        <div id="keynote" class="tab-content">
+            <span class="eyebrow">LightSec 2026</span>
+            <h2>Keynote Speaker</h2>
+            
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start; margin-top: 1.5rem;">
+                <div style="flex: 0 0 250px;">
+                    <img src="keynotespeaker.jpg" alt="Michael Hutter" style="width: 100%; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="margin-top: 0; color: var(--sea); border: none; padding: 0;">Michael Hutter</h3>
+                    <p style="font-weight: 500; color: var(--ink);">Full Professor, University of the Bundeswehr Munich (UniBW)<br>Former Head of Innovation and Concepts, PQShield</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Title</h4>
+                    <p style="font-weight: 500; font-style: italic; color: var(--ember);">"Rethinking Lightweight Cryptography for the Post-Quantum Era"</p>
+                </div>
+            </div>
+
+            <h4 style="margin-top: 2rem;">Abstract</h4>
+            <p>Lightweight cryptography has traditionally focused on minimizing area, energy, and latency for a fixed algorithm on a constrained device. Post-quantum migration challenges this model: transitional systems must support classical and post-quantum algorithms simultaneously, accommodate increasingly diverse computational requirements, and remain secure over deployment lifetimes measured in decades. The unit of optimization is therefore no longer a single primitive, but the complete cryptographic portfolio. Although lightweightness and crypto agility are often viewed as conflicting objectives, carefully designed agility can reduce total system cost rather than merely introduce additional overhead. This talk presents a methodology for lightweight crypto agility: identify real application workloads, quantify their dominant costs, and selectively share only genuinely compatible hardware resources. Three case studies, ranging from unified cryptographic primitives and shared arithmetic to processor-level acceleration, demonstrate how this principle can reduce total cost while supporting a broad and evolving range of classical and post-quantum algorithms. The talk concludes with design principles for lightweight cryptography that enable constrained systems to remain efficient, secure, and adaptable throughout the post-quantum transition. Ultimately, the cost of a cryptographic algorithm is not what it takes to deploy it - but what it takes to replace it.</p>
+
+            <h4 style="margin-top: 1.5rem;">Bio</h4>
+            <p>Michael Hutter is a Full Professor at the University of the Bundeswehr Munich, Germany, where he leads the Embedded Systems Security (ESSEC) group within the Department of Computer Science and the Research Institute CODE. His research focuses on secure hardware design, side-channel and fault analysis, and the efficient implementation of post-quantum cryptography on constrained devices. He received his PhD and Habilitation (venia docendi) in Applied Cryptography from Graz University of Technology, Austria. Before returning to academia, he spent more than a decade in industry as Head of Innovation and Concepts at PQShield (Oxford, UK) and as Senior Principal Engineer at Rambus (formerly Cryptography Research Inc., San Francisco, USA). He holds more than 30 international patents and has co-authored over 70 peer-reviewed publications. He has served on the program committees of leading venues including IACR CHES, Eurocrypt, and Asiacrypt, as Topic Chair (DT5) at DATE 2024–2026, and as Co-Editor-in-Chief of the IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES) in 2025.</p>
+        </div>
+
         <!-- ════════════════════ WORKSHOP PROGRAM ════════════════════ -->
         <div id="workshop-program" class="tab-content">
             <span class="eyebrow">LightSec 2026</span>
@@ -1387,7 +1413,7 @@
                             <td style="padding: 16px 20px;">
                                 <strong style="color: var(--ink);">Keynote</strong>
                                 <div style="color: var(--ember); font-size: 0.95rem; margin-top: 0.2rem;">Mike Hutter
-                                    (UniBW, PQShield)</div>
+                                    (UniBW, PQShield) <a href="#" onclick="openTab({currentTarget: document.querySelectorAll('.dropdown-item')[0]}, 'keynote'); return false;" style="font-size: 0.85rem; margin-left: 0.5rem; text-decoration: underline;">View Details</a></div>
                             </td>
                         </tr>
                         <tr>
