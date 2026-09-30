@@ -1199,7 +1199,7 @@
                     <div class="dropdown-content">
                         <button class="dropdown-item" onclick="openTab(event, 'organization')">Organizing
                             Committee</button>
-                        <button class="dropdown-item" onclick="openTab(event, 'sponsorship')">Sponsorship</button>
+                        <button class="dropdown-item" onclick="openTab(event, 'partnership')">Partnership</button>
                     </div>
                 </div>
 
@@ -2249,7 +2249,7 @@
                     conference and present a poster, authors must pay the applicable attendance fee: <strong>75 USD for
                         students</strong> or <strong>150 USD for regular attendees</strong>.</p>
                 <p style="margin-bottom: 0; font-size: 0.95rem; font-style: italic; color: var(--stone);">Note: A
-                    limited number of students will be funded by our sponsors.</p>
+                    limited number of students will be funded by our partners.</p>
             </div>
 
             <h3>Review &amp; Evaluation Process</h3>
@@ -2304,7 +2304,7 @@
                     <p style="font-size: 0.92rem; line-height: 1.45; margin-bottom: 1rem;">The registration fee includes
                         workshop access, one-day entry to the venue/hotel area, lunch, and coffee breaks.</p>
                     <p style="font-size: 0.88rem; font-style: italic; line-height: 1.45; color: var(--stone-soft);">
-                        Scholarship support may be available for a limited number of students if sponsorship funding is
+                        Scholarship support may be available for a limited number of students if partnership funding is
                         secured.
                     </p>
                 </div>
@@ -2335,19 +2335,19 @@
 
         </div>
 
-        <!-- ════════════════════ SPONSORSHIP ════════════════════ -->
-        <div id="sponsorship" class="tab-content">
+        <!-- ════════════════════ PARTNERSHIP ════════════════════ -->
+        <div id="partnership" class="tab-content">
             <span class="eyebrow">Partner With Us</span>
-            <h2>Sponsorship</h2>
-            <p>LightSec 2026 offers sponsorship opportunities for organizations interested in supporting
-                research in lightweight cryptography, security, and privacy. Sponsor logos and details will be added as
-                agreements are finalized. You can download our detailed sponsorship brochure in English or Turkish
+            <h2>Partnership</h2>
+            <p>LightSec 2026 offers partnership opportunities for organizations interested in supporting
+                research in lightweight cryptography, security, and privacy. Partner logos and details will be added as
+                agreements are finalized. You can download our detailed partnership brochure in English or Turkish
                 below:</p>
 
             <div style="margin: 1.5rem 0;">
-                <a href="Lightsec 2026_SponsorENG.pdf" class="btn btn-download" download><span>↓ Download Sponsorship
+                <a href="Lightsec 2026_SponsorENG.pdf" class="btn btn-download" download><span>↓ Download Partnership
                         Brochure (EN)</span></a>
-                <a href="Lightsec 2026_SponsorTR.pdf" class="btn btn-download" download><span>↓ Download Sponsorluk
+                <a href="Lightsec 2026_SponsorTR.pdf" class="btn btn-download" download><span>↓ Download Partnerlik
                         Broşürü (TR)</span></a>
             </div>
 
@@ -2382,35 +2382,13 @@
                     <img src="logos/tubitak.png" alt="TÜBİTAK Logo"
                         style="height: 75px; max-width: 100%; object-fit: contain;">
                 </a>
-            </div>
-
-            <h3>Sponsorship Tiers</h3>
-            <div class="grid-2" style="margin-top:1rem;">
-                <div class="sponsor-tier gold">
-                    <h4 style="text-align: left; width: 100%;">🏆 Gold Sponsor</h4>
-                    <a href="https://bte.gtu.edu.tr/sirlabs/" target="_blank"
-                        style="display: inline-block; margin: 1rem 0; transition: transform 0.25s; text-decoration: none;"
-                        onmouseover="this.style.transform='scale(1.04)';" onmouseout="this.style.transform='scale(1)';">
-                        <img src="logos/sirlabs.jpeg" alt="SIR Labs Logo"
-                            style="height: 70px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto;">
-                        <span
-                            style="display: block; margin-top: 0.8rem; font-weight: 600; color: var(--ink); font-size: 1.15rem;">SIR
-                            Labs</span>
-                    </a>
-                </div>
-                <div class="sponsor-tier silver"
-                    style="border-style: solid; border-color: #E0E0E0; background-color: var(--paper-2); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
-                    <h4 style="text-align: left;">🥈 Silver Sponsor</h4>
-                    <a href="https://famecrypt.com.tr/" target="_blank"
-                        style="display: inline-block; margin: 1rem 0; transition: transform 0.25s; text-decoration: none;"
-                        onmouseover="this.style.transform='scale(1.04)';" onmouseout="this.style.transform='scale(1)';">
-                        <img src="logos/fame.png" alt="FAME CRYPT Logo"
-                            style="height: 60px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto;">
-                        <span
-                            style="display: block; margin-top: 0.8rem; font-weight: 600; color: var(--ink); font-size: 1.1rem;">FAME
-                            CRYPT</span>
-                    </a>
-                </div>
+                <a href="https://bte.gtu.edu.tr/sirlabs/" target="_blank"
+                    style="display: inline-block; transition: transform 0.25s, opacity 0.25s;"
+                    onmouseover="this.style.transform='scale(1.03)'; this.style.opacity='0.9';"
+                    onmouseout="this.style.transform='scale(1)'; this.style.opacity='1';">
+                    <img src="logos/sirlabs.jpeg" alt="SIR Labs Logo"
+                        style="height: 75px; max-width: 100%; object-fit: contain;">
+                </a>
             </div>
 
             <h3>Organizing Institutions</h3>
@@ -2481,12 +2459,18 @@
                             style="height: 28px; margin-right: 10px; object-fit: contain;">
                         <span>Barkhausen Institut</span>
                     </a>
+                    <a href="https://famecrypt.com.tr/" target="_blank" class="sponsor-placeholder"
+                        style="text-decoration: none; width: auto; padding: 8px 14px; height: auto; min-height: 50px; display: flex; align-items: center;">
+                        <img src="logos/fame.png" alt="FAME CRYPT Logo"
+                            style="height: 28px; margin-right: 10px; object-fit: contain;">
+                        <span>FAME CRYPT</span>
+                    </a>
                 </div>
             </div>
 
             <div class="card" style="margin-top:3rem;">
-                <h3 style="border:none; padding:0; margin: 0 0 .6rem;">Sponsorship Inquiries</h3>
-                <p style="margin-bottom:0;">For sponsorship opportunities and inquiries, please contact:<br>
+                <h3 style="border:none; padding:0; margin: 0 0 .6rem;">Partnership Inquiries</h3>
+                <p style="margin-bottom:0;">For partnership opportunities and inquiries, please contact:<br>
                     <a href="mailto:info@lightsec2026.com"
                         style="color:var(--ember); font-weight:600; font-family: var(--font-mono);">info@lightsec2026.com</a>
                 </p>
@@ -2522,7 +2506,7 @@
                                 <option value="">Select a topic...</option>
                                 <option>Paper Submission</option>
                                 <option>Registration</option>
-                                <option>Sponsorship</option>
+                                <option>Partnership</option>
                                 <option>Poster Session</option>
                                 <option>Accommodation / Travel</option>
                                 <option>General Inquiry</option>
