@@ -1220,7 +1220,7 @@
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
                     <span style="font-size: 1.2rem; line-height: 1;">📅</span>
                     <span style="color: var(--ink); font-weight: 500; font-size: 0.95rem;">The <strong>Workshop
-                            Program</strong> and <strong>Accepted Papers</strong> are now available.</span>
+                            Program</strong>, <strong>Accepted Papers</strong>, and <strong>Accepted Posters</strong> are now available.</span>
                 </div>
                 <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                     <button class="btn"
@@ -1230,8 +1230,13 @@
                     </button>
                     <button class="btn"
                         style="margin: 0; padding: 8px 16px; font-size: 0.85rem; background-color: var(--sea); border-color: var(--sea);"
-                        onclick="openTab({currentTarget: document.querySelectorAll('.dropdown-item')[1]}, 'accepted-papers')">
+                        onclick="openTab({currentTarget: document.querySelectorAll('.dropdown-item')[2]}, 'accepted-papers')">
                         <span>Accepted Papers →</span>
+                    </button>
+                    <button class="btn"
+                        style="margin: 0; padding: 8px 16px; font-size: 0.85rem; background-color: var(--sea); border-color: var(--sea);"
+                        onclick="openTab({currentTarget: document.querySelectorAll('.dropdown-item')[3]}, 'accepted-posters')">
+                        <span>Accepted Posters →</span>
                     </button>
                 </div>
             </div>
